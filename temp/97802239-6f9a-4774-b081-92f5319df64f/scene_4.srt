@@ -1,0 +1,16 @@
+1
+00:00:00,000 --> 00:00:02,157
+(To a holographic assistant) Please
+
+2
+00:00:02,157 --> 00:00:04,500
+prioritize the alpha test feedback for
+
+3
+00:00:04,500 --> 00:00:06,780
+the neural network optimization, then
+
+4
+00:00:06,780 --> 00:00:09,000
+schedule a sync with the Tokyo team.
+

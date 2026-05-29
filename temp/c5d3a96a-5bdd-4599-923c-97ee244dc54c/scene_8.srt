@@ -1,0 +1,16 @@
+1
+00:00:00,000 --> 00:00:01,615
+As the city slept, illuminated by
+
+2
+00:00:01,615 --> 00:00:03,279
+endless data streams, the question
+
+3
+00:00:03,279 --> 00:00:05,237
+lingered: In this perfected world, where
+
+4
+00:00:05,237 --> 00:00:07,000
+did humanity truly begin and AI end?
+

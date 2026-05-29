@@ -1,0 +1,8 @@
+1
+00:00:00,000 --> 00:00:03,222
+The pace of human innovation,
+
+2
+00:00:03,222 --> 00:00:07,000
+accelerated by AI, knew no bounds.
+

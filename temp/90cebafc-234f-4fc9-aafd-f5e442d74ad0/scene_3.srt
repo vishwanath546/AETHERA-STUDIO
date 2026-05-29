@@ -1,0 +1,8 @@
+1
+00:00:00,000 --> 00:00:04,875
+They will never know the question. They
+
+2
+00:00:04,875 --> 00:00:08,000
+will only see the answer.
+

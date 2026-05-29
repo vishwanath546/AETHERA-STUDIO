@@ -1,0 +1,16 @@
+1
+00:00:00,000 --> 00:00:02,594
+Every stadium has a hundred thousand
+
+2
+00:00:02,594 --> 00:00:05,045
+voices. But in here, there is only
+
+3
+00:00:05,045 --> 00:00:07,351
+one. And it always asks the same
+
+4
+00:00:07,351 --> 00:00:08,000
+question.
+
