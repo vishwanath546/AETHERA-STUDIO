@@ -36,7 +36,7 @@ export async function runProduction(jobId: string): Promise<void> {
     updateJobStatus(jobId, "producing");
 
     // Create temporary directory for job assets
-    const workspaceRoot = "c:\\AI-video-generation";
+    const workspaceRoot = path.join(process.cwd(), "public");
     const tempDir = path.join(workspaceRoot, "temp", jobId);
     if (!fs.existsSync(tempDir)) {
       fs.mkdirSync(tempDir, { recursive: true });
@@ -178,7 +178,7 @@ export async function mergeScenes(jobId: string, sequence?: number[]): Promise<v
 
   updateJobStatus(jobId, "merging");
 
-  const workspaceRoot = "c:\\AI-video-generation";
+  const workspaceRoot = path.join(process.cwd(), "public");
   const tempDir = path.join(workspaceRoot, "temp", jobId);
 
   try {

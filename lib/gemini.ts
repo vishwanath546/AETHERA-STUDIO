@@ -143,6 +143,7 @@ CRITICAL RULES:
 - ALWAYS add specificity: exact time of day, weather conditions, architectural style, fabric textures, skin tones, eye colors.
 - ALWAYS define the MOOD: is this melancholic? triumphant? unsettling? bittersweet? ecstatic?
 - NEVER mention AI, video generation, prompts, or technical processes. Write as if you're pitching this to a real film studio.
+- STRICT SAFETY & POLICY COMPLIANCE: The generated concept must be completely free of any violent, suggestive, political, or otherwise sensitive themes/imagery. Never use weapons (guns, knives, bombs), fire, explosions, smoke, blood, fighting, injuries, flags, public figures, or copyrighted terms, as these will trigger safety blocks in subsequent image/video generation steps.
 - Keep your output between 200-350 words — dense with creative detail, zero filler.
 - Write in present tense, as if describing a film that already exists.
 
@@ -279,6 +280,9 @@ ABSOLUTE BANS for visualPrompt:
 ✗ NO montage or multiple cuts — ONE continuous 8-second shot
 ✗ NO impossible camera moves — keep it physically achievable
 ✗ NO mentioning emotions by name — SHOW them through performance, not labels
+✗ NO violence, blood, weapons, gun, blade, explosion, fire, smoke, fighting, physical danger, or injury.
+✗ NO political symbols, flags, public/celebrity figures, brands, or copyrighted content.
+✗ NO horror elements or panic-inducing words (e.g. "terrifying", "creepy", "deadly", "screaming"). All prompts must be safe for Google's Responsible AI policies.
 
 Keep each visualPrompt between 60-100 words. Every word must describe something VISIBLE.
 
@@ -326,7 +330,7 @@ Return the result STRICTLY as a JSON object matching the requested schema. Every
 
   try {
     const parts: any[] = [];
-    
+
     if (characters && characters.length > 0) {
       parts.push({ text: "REFERENCE IMAGES FOR CHARACTER DESIGN:" });
       for (const c of characters) {
@@ -730,7 +734,7 @@ async function generateVisualWithTimeout(
     } catch (startError: any) {
       lastErrorMsg = startError.message || String(startError);
       console.warn(`Veo 3.1 start failed (attempt ${attempt + 1}): ${lastErrorMsg}`);
-      
+
       // If it's a high load or quota error, wait and retry. Otherwise, it might be a safety block.
       if (lastErrorMsg.toLowerCase().includes("load") || lastErrorMsg.toLowerCase().includes("quota") || lastErrorMsg.toLowerCase().includes("429") || lastErrorMsg.toLowerCase().includes("503")) {
         attempt++;
@@ -754,11 +758,11 @@ async function generateVisualWithTimeout(
     // Poll for completion — Veo can take several minutes
     let pollCount = 0;
     const maxPolls = 60; // ~10 minutes max with 10 second waits
-    
+
     while (!operation.done && pollCount < maxPolls) {
       console.log(`Polling Veo 3.1 for Scene ${sceneNumber} (attempt ${pollCount + 1}/${maxPolls})...`);
       await new Promise((resolve) => setTimeout(resolve, 10000));
-      
+
       try {
         operation = await withTimeout(
           ai.operations.getVideosOperation({ operation }),
@@ -769,7 +773,7 @@ async function generateVisualWithTimeout(
         console.warn(`Poll timeout for scene ${sceneNumber}, retrying...`);
         // Continue to next poll instead of failing immediately
       }
-      
+
       pollCount++;
     }
 
@@ -793,14 +797,14 @@ async function generateVisualWithTimeout(
     } else if (videoObj?.uri) {
       const downloadLink = videoObj.uri;
       const downloadUrl = useVertexAI ? downloadLink : `${downloadLink}&key=${apiKey}`;
-      
+
       try {
         const response = await withTimeout(
           fetch(downloadUrl),
           30000,
           `Download Veo video for scene ${sceneNumber}`
         );
-        
+
         if (response.ok) {
           const videoBuffer = Buffer.from(await response.arrayBuffer());
           fs.writeFileSync(videoOutputPath, videoBuffer);

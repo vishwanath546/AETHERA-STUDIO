@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { ProductionHeader } from "@/components/studio/production-header";
 import { ProductionCard } from "@/components/studio/production-card";
-import { Clapperboard, ChevronLeft, Sparkles, AlertCircle, Film } from "lucide-react";
+import { Clapperboard, ChevronLeft, Sparkles, AlertCircle, Film, RotateCcw } from "lucide-react";
 import Link from "next/link";
 import { Job, SceneJob } from "@/lib/job-store";
 
@@ -109,6 +109,30 @@ export default function ProductionPage() {
       }
     } catch (err) {
       setError(`Network error while trying to retry scene ${sceneNumber}.`);
+    }
+  };
+
+  const handleResumePipeline = async () => {
+    if (!job) return;
+    try {
+      setError("");
+      const response = await fetch('/api/start-production', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          jobId: job.id,
+          scenes: job.scenes,
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        setError(errorData.error || "Failed to resume production.");
+      } else {
+        setRetryCount(prev => prev + 1);
+      }
+    } catch (err) {
+      setError("Network error while trying to resume production.");
     }
   };
 
@@ -260,11 +284,31 @@ export default function ProductionPage() {
 
         {/* Global Error Banner */}
         {(error || job.error) && (
-          <div className="p-4 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-300 text-sm flex items-start gap-2.5 shadow-lg">
-            <AlertCircle className="h-5 w-5 text-rose-400 shrink-0 mt-0.5" />
-            <div className="space-y-1">
-              <span className="font-bold block">Production Error Encountered</span>
-              <p className="font-light leading-relaxed">{error || job.error}</p>
+          <div className="p-5 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-300 text-sm space-y-4 shadow-lg">
+            <div className="flex items-start gap-2.5">
+              <AlertCircle className="h-5 w-5 text-rose-400 shrink-0 mt-0.5" />
+              <div className="space-y-1">
+                <span className="font-bold block">Production Error Encountered</span>
+                <p className="font-light leading-relaxed">{error || job.error}</p>
+              </div>
+            </div>
+            
+            <div className="flex flex-wrap gap-3 pt-3 border-t border-rose-500/10">
+              <button
+                onClick={handleResumePipeline}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs transition-colors shadow-md shadow-indigo-900/30"
+              >
+                <Sparkles className="h-3.5 w-3.5 animate-pulse" />
+                Resume Processing Remaining Scenes
+              </button>
+
+              <Link
+                href="/"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] text-neutral-300 font-semibold text-xs transition-colors"
+              >
+                <RotateCcw className="h-3.5 w-3.5" />
+                Regenerate Script with New Prompt
+              </Link>
             </div>
           </div>
         )}

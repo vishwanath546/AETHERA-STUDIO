@@ -159,76 +159,72 @@ export function ProductionCard({ jobId, scene, onRetry, onEditScene }: Productio
         )}
 
         {/* Interactive Progress Steps */}
-        {status === "complete" ? (
-          <div className="space-y-3">
-            {!isEditing ? (
-              <>
-                <div className="relative group rounded-lg overflow-hidden border border-emerald-500/20 bg-black aspect-video mt-2">
-                  <video
-                    src={`/api/scene-video/${jobId}/${scene.sceneNumber}`}
-                    controls
-                    className="w-full h-full object-contain"
-                    poster={scene.imagePath ? `/api/scene-video/${jobId}/${scene.sceneNumber}` : undefined}
-                  />
-                  <div className="absolute top-2 left-2 bg-black/60 backdrop-blur-md px-2 py-1 rounded text-[10px] font-bold tracking-widest text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5">
-                    <PlayCircle className="h-3 w-3" /> SCENE PREVIEW
-                  </div>
-                </div>
-                
-                {onEditScene && (
-                  <button
-                    onClick={() => setIsEditing(true)}
-                    className="w-full flex items-center justify-center gap-2 py-2 rounded-lg bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.1] text-neutral-300 text-xs font-semibold transition-colors"
-                  >
-                    <PencilLine className="h-3.5 w-3.5" /> Notice a mistake? Edit &amp; Regenerate
-                  </button>
+        {isEditing ? (
+          <div className="space-y-4 pt-2 border-t border-white/[0.05]">
+            <div className="space-y-2">
+              <Label className="text-[10px] font-bold tracking-wider text-neutral-400 uppercase flex items-center gap-1.5">
+                <Film className="h-3.5 w-3.5 text-[#7c3aed]" /> Visual Direction
+              </Label>
+              <Textarea
+                value={editedVisual}
+                onChange={(e) => setEditedVisual(e.target.value)}
+                className="bg-black/40 border-white/[0.05] focus:border-[#7c3aed]/50 text-white rounded-lg text-xs placeholder:text-neutral-600 resize-none min-h-[70px] focus:ring-0 leading-relaxed"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label className="text-[10px] font-bold tracking-wider text-neutral-400 uppercase flex items-center gap-1.5">
+                <Volume2 className="h-3.5 w-3.5 text-[#06b6d4]" /> Dialogue / Narration
+              </Label>
+              <Textarea
+                value={editedDialogue}
+                onChange={(e) => setEditedDialogue(e.target.value)}
+                className="bg-black/40 border-white/[0.05] focus:border-[#06b6d4]/50 text-white rounded-lg text-xs placeholder:text-neutral-600 resize-none min-h-[50px] focus:ring-0 leading-relaxed"
+              />
+            </div>
+
+            <div className="flex gap-2">
+              <button
+                onClick={() => setIsEditing(false)}
+                disabled={isSaving}
+                className="flex-1 py-2 rounded-lg bg-white/[0.03] hover:bg-white/[0.08] text-white text-xs font-semibold transition-colors disabled:opacity-50"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleSaveAndRegenerate}
+                disabled={isSaving}
+                className="flex-[2] flex items-center justify-center gap-1.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-md shadow-emerald-900/30 disabled:opacity-50"
+              >
+                {isSaving ? (
+                  <><Loader2 className="h-3.5 w-3.5 animate-spin" /> Starting...</>
+                ) : (
+                  <><CheckCircle2 className="h-3.5 w-3.5" /> Save &amp; Regenerate</>
                 )}
-              </>
-            ) : (
-              <div className="space-y-4 pt-2 border-t border-white/[0.05]">
-                <div className="space-y-2">
-                  <Label className="text-[10px] font-bold tracking-wider text-neutral-400 uppercase flex items-center gap-1.5">
-                    <Film className="h-3.5 w-3.5 text-[#7c3aed]" /> Visual Direction
-                  </Label>
-                  <Textarea
-                    value={editedVisual}
-                    onChange={(e) => setEditedVisual(e.target.value)}
-                    className="bg-black/40 border-white/[0.05] focus:border-[#7c3aed]/50 text-white rounded-lg text-xs placeholder:text-neutral-600 resize-none min-h-[70px] focus:ring-0 leading-relaxed"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label className="text-[10px] font-bold tracking-wider text-neutral-400 uppercase flex items-center gap-1.5">
-                    <Volume2 className="h-3.5 w-3.5 text-[#06b6d4]" /> Dialogue / Narration
-                  </Label>
-                  <Textarea
-                    value={editedDialogue}
-                    onChange={(e) => setEditedDialogue(e.target.value)}
-                    className="bg-black/40 border-white/[0.05] focus:border-[#06b6d4]/50 text-white rounded-lg text-xs placeholder:text-neutral-600 resize-none min-h-[50px] focus:ring-0 leading-relaxed"
-                  />
-                </div>
-
-                <div className="flex gap-2">
-                  <button
-                    onClick={() => setIsEditing(false)}
-                    disabled={isSaving}
-                    className="flex-1 py-2 rounded-lg bg-white/[0.03] hover:bg-white/[0.08] text-white text-xs font-semibold transition-colors disabled:opacity-50"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    onClick={handleSaveAndRegenerate}
-                    disabled={isSaving}
-                    className="flex-[2] flex items-center justify-center gap-1.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-md shadow-emerald-900/30 disabled:opacity-50"
-                  >
-                    {isSaving ? (
-                      <><Loader2 className="h-3.5 w-3.5 animate-spin" /> Starting...</>
-                    ) : (
-                      <><CheckCircle2 className="h-3.5 w-3.5" /> Save &amp; Regenerate</>
-                    )}
-                  </button>
-                </div>
+              </button>
+            </div>
+          </div>
+        ) : status === "complete" ? (
+          <div className="space-y-3">
+            <div className="relative group rounded-lg overflow-hidden border border-emerald-500/20 bg-black aspect-video mt-2">
+              <video
+                src={`/api/scene-video/${jobId}/${scene.sceneNumber}`}
+                controls
+                className="w-full h-full object-contain"
+                poster={scene.imagePath ? `/api/scene-video/${jobId}/${scene.sceneNumber}` : undefined}
+              />
+              <div className="absolute top-2 left-2 bg-black/60 backdrop-blur-md px-2 py-1 rounded text-[10px] font-bold tracking-widest text-emerald-400 border border-emerald-500/30 flex items-center gap-1.5">
+                <PlayCircle className="h-3 w-3" /> SCENE PREVIEW
               </div>
+            </div>
+            
+            {onEditScene && (
+              <button
+                onClick={() => setIsEditing(true)}
+                className="w-full flex items-center justify-center gap-2 py-2 rounded-lg bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.1] text-neutral-300 text-xs font-semibold transition-colors"
+              >
+                <PencilLine className="h-3.5 w-3.5" /> Notice a mistake? Edit &amp; Regenerate
+              </button>
             )}
           </div>
         ) : status !== "error" ? (
@@ -279,8 +275,18 @@ export function ProductionCard({ jobId, scene, onRetry, onEditScene }: Productio
               </div>
             </div>
             
-            {onRetry && (
-              <div className="pt-2 mt-1 border-t border-rose-500/10 flex justify-end">
+            <div className="pt-2 mt-1 border-t border-rose-500/10 flex justify-end gap-2">
+              {onEditScene && (
+                <button
+                  onClick={() => setIsEditing(true)}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] text-neutral-300 font-semibold transition-colors"
+                >
+                  <PencilLine className="h-3.5 w-3.5" />
+                  <span>Edit Prompt</span>
+                </button>
+              )}
+
+              {onRetry && (
                 <button
                   onClick={() => {
                     setIsRetrying(true);
@@ -297,8 +303,8 @@ export function ProductionCard({ jobId, scene, onRetry, onEditScene }: Productio
                   )}
                   <span>{isRetrying ? "Restarting..." : "Retry Scene"}</span>
                 </button>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         )}
       </div>

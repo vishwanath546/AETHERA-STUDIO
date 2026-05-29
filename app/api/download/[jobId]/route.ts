@@ -23,12 +23,20 @@ export async function GET(
       return NextResponse.json({ error: "The generated movie file was not found on disk." }, { status: 404 });
     }
 
+    const url = new URL(request.url);
+    const isInline = url.searchParams.get("inline") === "true";
+
+    const pathNormalized = filePath.replace(/\\/g, "/");
+    const publicIndex = pathNormalized.indexOf("/public/temp/");
+    if (isInline && publicIndex !== -1) {
+      const relativeUrl = pathNormalized.substring(publicIndex + 7); // "/temp/..."
+      return NextResponse.redirect(new URL(`${relativeUrl}?t=${Date.now()}`, request.url));
+    }
+
     const stat = fs.statSync(filePath);
     const fileStream = fs.createReadStream(filePath);
 
     // Support inline streaming in video player vs attachment download
-    const url = new URL(request.url);
-    const isInline = url.searchParams.get("inline") === "true";
     const contentDisposition = isInline 
       ? "inline" 
       : `attachment; filename="aethera_movie_${jobId.substring(0, 8)}.mp4"`;

@@ -28,10 +28,53 @@ export async function GET(
       return NextResponse.json({ error: "Scene video file not found on disk." }, { status: 404 });
     }
 
-    const stat = fs.statSync(scene.clipPath);
-    const buffer = fs.readFileSync(scene.clipPath);
+    const clipPathNormalized = scene.clipPath.replace(/\\/g, "/");
+    const publicIndex = clipPathNormalized.indexOf("/public/temp/");
+    if (publicIndex !== -1) {
+      const relativeUrl = clipPathNormalized.substring(publicIndex + 7); // "/temp/..."
+      return NextResponse.redirect(new URL(`${relativeUrl}?t=${Date.now()}`, request.url));
+    }
 
-    return new NextResponse(buffer, {
+    const stat = fs.statSync(scene.clipPath);
+    const fileStream = fs.createReadStream(scene.clipPath);
+
+    let isClosed = false;
+    const stream = new ReadableStream({
+      start(controller) {
+        fileStream.on("data", (chunk) => {
+          if (!isClosed) {
+            try {
+              controller.enqueue(chunk);
+            } catch (err) {
+              isClosed = true;
+              fileStream.destroy();
+            }
+          }
+        });
+        fileStream.on("end", () => {
+          if (!isClosed) {
+            isClosed = true;
+            try {
+              controller.close();
+            } catch (err) {}
+          }
+        });
+        fileStream.on("error", (err) => {
+          if (!isClosed) {
+            isClosed = true;
+            try {
+              controller.error(err);
+            } catch (err2) {}
+          }
+        });
+      },
+      cancel() {
+        isClosed = true;
+        fileStream.destroy();
+      }
+    });
+
+    return new Response(stream, {
       headers: {
         "Content-Type": "video/mp4",
         "Content-Disposition": "inline",
