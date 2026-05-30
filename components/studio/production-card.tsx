@@ -38,6 +38,13 @@ export function ProductionCard({ jobId, scene, onRetry, onEditScene }: Productio
 
   // Custom states and styling
   const stateConfig = {
+    idle: {
+      border: "border-white/[0.04]",
+      glow: "",
+      badgeText: "Idle",
+      badgeColor: "bg-neutral-500/10 text-neutral-400 border-neutral-500/20",
+      step: -1,
+    },
     queued: {
       border: "border-white/[0.04]",
       glow: "",

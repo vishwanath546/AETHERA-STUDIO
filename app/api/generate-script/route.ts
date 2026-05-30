@@ -45,7 +45,8 @@ export async function POST(request: Request) {
     // Map script scenes to SceneJobs
     const sceneJobs = scenes.map((scene) => ({
       ...scene,
-      status: "queued" as const,
+      status: "idle" as const,
+      approved: false,
     }));
 
     // Create and save Draft Job in store
