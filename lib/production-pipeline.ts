@@ -11,19 +11,22 @@ import {
 import { generateVisual } from "./gemini";
 import { generateAudio } from "./audio-generator";
 import { generateSRT } from "./subtitle-generator";
-import { assembleClip, concatenateClips } from "./ffmpeg";
+import { assembleClip, concatenateClips, extractLastFrame } from "./ffmpeg";
 import { uploadToGCS } from "./gcs";
 
 // Global lock to prevent concurrent pipeline loops for the same job
 const activePipelines = new Set<string>();
 
-export async function runProduction(jobId: string): Promise<void> {
-  if (activePipelines.has(jobId)) {
-    console.log(`Production Pipeline: Loop already running for job ${jobId}. It will pick up any newly queued scenes automatically.`);
+export async function runProduction(jobId: string, singleSceneNumber?: number): Promise<void> {
+  const isFull = singleSceneNumber === undefined;
+  const lockKey = isFull ? `${jobId}_full` : `${jobId}_scene_${singleSceneNumber}`;
+
+  if (activePipelines.has(`${jobId}_full`) || activePipelines.has(lockKey)) {
+    console.log(`Production Pipeline: Task ${lockKey} already active. Skipping.`);
     return;
   }
   
-  activePipelines.add(jobId);
+  activePipelines.add(lockKey);
 
   try {
     const initialJob = getJob(jobId);
@@ -48,18 +51,26 @@ export async function runProduction(jobId: string): Promise<void> {
       if (!currentJob) break;
 
       // Find the first scene that needs processing
-      const scene = currentJob.scenes.find(s => s.status === "queued" || s.status === "error");
+      const scene = currentJob.scenes.find(s => 
+        (s.status === "queued" || s.status === "error") &&
+        (singleSceneNumber === undefined || s.sceneNumber === singleSceneNumber)
+      );
       
       if (!scene) {
         // No scenes need processing. 
-        // Check if any scenes are currently in progress (e.g. if we resumed, but another node process is handling it? Unlikely in this single-node app).
         const anyGenerating = currentJob.scenes.some(s => 
           ["generating_image", "generating_audio", "assembling_clip"].includes(s.status)
         );
         
         if (!anyGenerating) {
-          console.log(`Production Pipeline: All ${currentJob.scenes.length} scenes completed for job ${jobId}. Awaiting user merge command.`);
-          updateJobStatus(jobId, "ready_to_merge");
+          const allCompleted = currentJob.scenes.every(s => s.status === "complete");
+          if (allCompleted) {
+            console.log(`Production Pipeline: All ${currentJob.scenes.length} scenes completed for job ${jobId}. Awaiting user merge command.`);
+            updateJobStatus(jobId, "ready_to_merge");
+          } else {
+            console.log(`Production Pipeline: Scene task completed. Some scenes are still pending.`);
+            updateJobStatus(jobId, "draft");
+          }
         }
         break;
       }
@@ -85,13 +96,32 @@ export async function runProduction(jobId: string): Promise<void> {
       try {
         // Step 1: Visual Generation
         updateSceneStatus(jobId, sceneNum, "generating_image");
+
+        let startingImageBase64: string | undefined;
+        if (sceneNum > 1) {
+          const prevScene = currentJob.scenes.find(s => s.sceneNumber === sceneNum - 1);
+          if (prevScene && prevScene.clipPath && fs.existsSync(prevScene.clipPath)) {
+            try {
+              console.log(`Production Pipeline: Extracting last frame of Scene ${sceneNum - 1} for Scene ${sceneNum}...`);
+              const lastFramePath = path.join(tempDir, `scene_${sceneNum - 1}_last_frame.jpg`);
+              await extractLastFrame(prevScene.clipPath, lastFramePath);
+              if (fs.existsSync(lastFramePath)) {
+                startingImageBase64 = `data:image/jpeg;base64,${fs.readFileSync(lastFramePath, { encoding: "base64" })}`;
+              }
+            } catch (err) {
+              console.warn(`Production Pipeline: Non-fatal error extracting last frame of previous scene:`, err);
+            }
+          }
+        }
+
         const visualPath = await generateVisual(
           scene.visualPrompt, 
           imagePath, 
           sceneNum, 
           scene.dialogueOrNarration, 
           scene.audioPrompt || "",
-          currentJob.characters
+          currentJob.characters,
+          startingImageBase64
         );
 
         // Step 2: Audio/Narration Generation
@@ -162,7 +192,7 @@ export async function runProduction(jobId: string): Promise<void> {
     console.error(`Production Pipeline Failed for job ${jobId}:`, error);
     updateJobStatus(jobId, "error", error.message || String(error));
   } finally {
-    activePipelines.delete(jobId);
+    activePipelines.delete(lockKey);
   }
 }
 

@@ -248,6 +248,49 @@ export function generateLocalFallbackScript(prompt: string, sceneCount: number):
 // scene-by-scene screenplay with real filmmaking techniques.
 // ────────────────────────────────────────────────────────────────────────────
 
+/**
+ * Common helper function to call Gemini model with structured output schema for generating/regenerating scenes.
+ */
+async function generateScenesWithAI<T>({
+  systemInstruction,
+  contents,
+  responseSchema,
+  timeoutMs = GEMINI_API_TIMEOUT,
+  operationLabel,
+}: {
+  systemInstruction: string;
+  contents: any[];
+  responseSchema: any;
+  timeoutMs?: number;
+  operationLabel: string;
+}): Promise<T> {
+  const response = await withTimeout(
+    ai.models.generateContent({
+      model: "gemini-2.5-pro",
+      contents,
+      config: {
+        systemInstruction,
+        responseMimeType: "application/json",
+        responseSchema,
+      },
+    }),
+    timeoutMs,
+    operationLabel
+  );
+
+  const text = response.text;
+  if (!text) {
+    throw new Error(`Empty response received from Gemini API during ${operationLabel}`);
+  }
+
+  try {
+    return JSON.parse(text) as T;
+  } catch (err: any) {
+    console.error(`[GenAI] Failed to parse JSON response during ${operationLabel}:`, text);
+    throw new Error(`Invalid JSON format in response from ${operationLabel}: ${err.message}`);
+  }
+}
+
 export async function generateScript(prompt: string, sceneCount: number, language?: string, characters?: any[]): Promise<Scene[]> {
   // Phase 1: Elevate the raw prompt into a cinematic vision
   const elevatedConcept = await elevatePrompt(prompt, sceneCount);
@@ -362,56 +405,251 @@ PRODUCTION ORDER: Break this vision into exactly ${sceneCount} sequential scenes
 Treat every scene as if your career depends on it. No mediocre shots. No generic descriptions. Every frame must be worthy of a cinematography reel.`
     });
 
-    const response = await withTimeout(
-      ai.models.generateContent({
-        model: "gemini-2.5-pro",
-        contents: parts,
-        config: {
-          systemInstruction,
-          responseMimeType: "application/json",
-          responseSchema: {
-            type: Type.OBJECT,
-            properties: {
-              scenes: {
-                type: Type.ARRAY,
-                items: {
-                  type: Type.OBJECT,
-                  properties: {
-                    sceneNumber: { type: Type.INTEGER },
-                    visualPrompt: { type: Type.STRING },
-                    dialogueOrNarration: { type: Type.STRING },
-                    estimatedDuration: { type: Type.INTEGER },
-                    audioPrompt: { type: Type.STRING },
-                  },
-                  required: ["sceneNumber", "visualPrompt", "dialogueOrNarration", "estimatedDuration", "audioPrompt"],
-                },
+    const response = await generateScenesWithAI<{ scenes: Scene[] }>({
+      systemInstruction,
+      contents: parts,
+      responseSchema: {
+        type: Type.OBJECT,
+        properties: {
+          scenes: {
+            type: Type.ARRAY,
+            items: {
+              type: Type.OBJECT,
+              properties: {
+                sceneNumber: { type: Type.INTEGER },
+                visualPrompt: { type: Type.STRING },
+                dialogueOrNarration: { type: Type.STRING },
+                estimatedDuration: { type: Type.INTEGER },
+                audioPrompt: { type: Type.STRING },
               },
+              required: ["sceneNumber", "visualPrompt", "dialogueOrNarration", "estimatedDuration", "audioPrompt"],
             },
-            required: ["scenes"],
           },
         },
-      }),
-      GEMINI_API_TIMEOUT,
-      "Gemini script generation"
-    );
+        required: ["scenes"],
+      },
+      operationLabel: "Gemini script generation",
+    });
 
-    const text = response.text;
-    if (!text) {
-      throw new Error("Empty response received from Gemini API");
-    }
-
-    const data = JSON.parse(text);
-    if (!data.scenes || !Array.isArray(data.scenes)) {
-      throw new Error("Invalid response format: 'scenes' array missing");
-    }
-
-    console.log(`[Script Generator] Successfully generated ${data.scenes.length} cinematic scenes.`);
-    return data.scenes;
+    return response.scenes;
   } catch (error: any) {
     console.warn(`[Script Generator] Gemini script generation failed (error: ${error.status || error.message || error}). Falling back to local procedural script generator...`);
     return generateLocalFallbackScript(prompt, sceneCount);
   }
 }
+
+export async function regenerateScript(
+  jobId: string,
+  instruction: string,
+  currentScenes: Scene[],
+  originalPrompt: string,
+  sceneCount: number,
+  language?: string,
+  characters?: any[]
+): Promise<Scene[]> {
+  const systemInstruction = `You are a professional script writer plus director who shoots short films, movies, cartoons, advertisements, and many more. Your absolute mission is to revise and improve an existing screenplay draft based on the user's instructions.
+  
+You must strictly keep the uploaded characters in mind, respect the chosen language (if specified), and output exactly ${sceneCount} revised scenes.
+
+You are given:
+1. The ORIGINAL client brief.
+2. The EXISTING screenplay draft (scenes).
+3. The USER'S REFINEMENT INSTRUCTIONS (what they want changed).
+
+Your task:
+- Read the existing scenes and the user's refinement instructions.
+- Revise the screenplay accordingly. Update the visual prompts, dialogue/narration, and duration as needed to satisfy the instructions.
+- If the user asks for a change in setting or style, apply it across all scenes to maintain visual and narrative continuity.
+- If they ask for minor changes (e.g., "change dialogue in scene 2", "make scene 1 longer"), make only those changes and keep the rest of the screenplay mostly intact.
+- ALWAYS repeat the detailed physical descriptions of the characters and setting in EVERY scene's visualPrompt to ensure the video generation model maintains perfect visual continuity.
+- Maintain Match-on-Action continuity: ensure each scene starts exactly where the previous scene ends.
+- STRICT SAFETY & POLICY COMPLIANCE: No weapons, violence, blood, explosions, fire, smoke, flags, public figures, horror, or copyrighted terms.
+
+Return the result STRICTLY as a JSON object matching the requested schema. Every scene must be exceptional.`;
+
+  const contents = [
+    {
+      text: `ORIGINAL CLIENT BRIEF: "${originalPrompt}"
+      
+EXISTING SCREENPLAY DRAFT:
+${JSON.stringify(currentScenes, null, 2)}
+
+USER'S REFINEMENT INSTRUCTIONS:
+"${instruction}"
+
+Break this revised vision into exactly ${sceneCount} sequential scenes. Return the result matching the required schema.`
+    }
+  ];
+
+  try {
+    console.log(`[Script Generator] Regenerating script for Job ${jobId} with instruction: "${instruction.substring(0, 100)}..."`);
+    const response = await generateScenesWithAI<{ scenes: Scene[] }>({
+      systemInstruction,
+      contents,
+      responseSchema: {
+        type: Type.OBJECT,
+        properties: {
+          scenes: {
+            type: Type.ARRAY,
+            items: {
+              type: Type.OBJECT,
+              properties: {
+                sceneNumber: { type: Type.INTEGER },
+                visualPrompt: { type: Type.STRING },
+                dialogueOrNarration: { type: Type.STRING },
+                estimatedDuration: { type: Type.INTEGER },
+                audioPrompt: { type: Type.STRING },
+              },
+              required: ["sceneNumber", "visualPrompt", "dialogueOrNarration", "estimatedDuration", "audioPrompt"],
+            },
+          },
+        },
+        required: ["scenes"],
+      },
+      operationLabel: "Gemini script regeneration",
+    });
+
+    return response.scenes;
+  } catch (error: any) {
+    console.warn(`[Script Generator] Script regeneration failed: ${error.message || error}. Falling back to original prompt generation...`);
+    return generateScript(originalPrompt + " (Revised: " + instruction + ")", sceneCount, language, characters);
+  }
+}
+
+export async function regenerateSingleScene(
+  jobId: string,
+  sceneNumber: number,
+  instruction: string,
+  currentScene: Scene,
+  originalPrompt: string,
+  language?: string,
+  characters?: any[]
+): Promise<Scene> {
+  const systemInstruction = `You are a professional script writer plus director who shoots short films, movies, cartoons, advertisements, and many more. Your absolute mission is to revise and improve a specific scene from a screenplay based on the user's instructions.
+  
+You must strictly keep the uploaded characters in mind, respect the chosen language (if specified), and output the revised scene.
+
+You are given:
+1. The ORIGINAL overall client brief.
+2. The CURRENT scene details (scene number, visual prompt, dialogue/narration, estimated duration, and audio prompt).
+3. The USER'S REFINEMENT INSTRUCTIONS for this specific scene.
+
+Your task:
+- Revise this specific scene. Update the visualPrompt, dialogueOrNarration, estimatedDuration, and audioPrompt to satisfy the user's instructions.
+- Ensure the visualPrompt contains detailed physical descriptions of the characters and setting to maintain visual continuity.
+- The revised visualPrompt must be a single, continuous camera shot.
+- STRICT SAFETY & POLICY COMPLIANCE: No weapons, violence, blood, explosions, fire, smoke, flags, public figures, horror, or copyrighted terms.
+
+Return the result STRICTLY as a JSON object matching the requested schema.`;
+
+  const contents = [
+    {
+      text: `ORIGINAL CLIENT BRIEF: "${originalPrompt}"
+      
+CURRENT SCENE DETAILS:
+${JSON.stringify(currentScene, null, 2)}
+
+USER'S REFINEMENT INSTRUCTIONS FOR THIS SCENE:
+"${instruction}"
+
+Return the revised scene details matching the schema.`
+    }
+  ];
+
+  try {
+    console.log(`[Script Generator] Regenerating Scene ${sceneNumber} for Job ${jobId} with instruction: "${instruction}"`);
+    const response = await generateScenesWithAI<Scene>({
+      systemInstruction,
+      contents,
+      responseSchema: {
+        type: Type.OBJECT,
+        properties: {
+          sceneNumber: { type: Type.INTEGER },
+          visualPrompt: { type: Type.STRING },
+          dialogueOrNarration: { type: Type.STRING },
+          estimatedDuration: { type: Type.INTEGER },
+          audioPrompt: { type: Type.STRING },
+        },
+        required: ["sceneNumber", "visualPrompt", "dialogueOrNarration", "estimatedDuration", "audioPrompt"],
+      },
+      operationLabel: `Gemini single scene regeneration for Scene ${sceneNumber}`,
+    });
+
+    return response;
+  } catch (error: any) {
+    console.error(`[Script Generator] Single scene regeneration failed:`, error);
+    throw error;
+  }
+}
+
+export async function generateNextScene(
+  jobId: string,
+  instruction: string,
+  currentScenes: Scene[],
+  originalPrompt: string,
+  language?: string,
+  characters?: any[]
+): Promise<Scene> {
+  const systemInstruction = `You are a professional script writer plus director who shoots short films, movies, cartoons, advertisements, and many more. Your absolute mission is to write a brand new additional scene that will be appended to the end of an existing screenplay based on the user's instruction.
+  
+You must strictly keep the uploaded characters in mind, respect the chosen language for all dialogue/narration, and output the details for this new scene.
+
+You are given:
+1. The ORIGINAL overall client brief.
+2. The EXISTING screenplay draft (scenes).
+3. The USER'S INSTRUCTION/PROMPT for the new scene.
+
+Your task:
+- Analyze the narrative progression, visual style, and characters in the existing scenes.
+- Create a new scene that continues naturally from the last scene (Match-on-Action continuity).
+- The new scene's sceneNumber will be ${currentScenes.length + 1}.
+- Update the visualPrompt, dialogueOrNarration, estimatedDuration, and audioPrompt to satisfy the user's instruction.
+- Ensure the visualPrompt contains detailed physical descriptions of the characters and setting to maintain visual continuity.
+- The new visualPrompt must be a single, continuous camera shot.
+- STRICT SAFETY & POLICY COMPLIANCE: No weapons, violence, blood, explosions, fire, smoke, flags, public figures, horror, or copyrighted terms.
+
+Return the result STRICTLY as a JSON object matching the requested schema.`;
+
+  const contents = [
+    {
+      text: `ORIGINAL CLIENT BRIEF: "${originalPrompt}"
+      
+EXISTING SCREENPLAY DRAFT:
+${JSON.stringify(currentScenes, null, 2)}
+
+USER'S INSTRUCTION FOR THE NEW SCENE:
+"${instruction}"
+
+Generate the details for this new scene (Scene Number ${currentScenes.length + 1}) matching the schema.`
+    }
+  ];
+
+  try {
+    console.log(`[Script Generator] Generating new scene for Job ${jobId} with instruction: "${instruction}"`);
+    const response = await generateScenesWithAI<Scene>({
+      systemInstruction,
+      contents,
+      responseSchema: {
+        type: Type.OBJECT,
+        properties: {
+          sceneNumber: { type: Type.INTEGER },
+          visualPrompt: { type: Type.STRING },
+          dialogueOrNarration: { type: Type.STRING },
+          estimatedDuration: { type: Type.INTEGER },
+          audioPrompt: { type: Type.STRING },
+        },
+        required: ["sceneNumber", "visualPrompt", "dialogueOrNarration", "estimatedDuration", "audioPrompt"],
+      },
+      operationLabel: `Gemini generate new scene for Job ${jobId}`,
+    });
+
+    return response;
+  } catch (error: any) {
+    console.error(`[Script Generator] New scene generation failed:`, error);
+    throw error;
+  }
+}
+
 
 import { execFile } from "child_process";
 
@@ -626,7 +864,8 @@ export async function generateVisual(
   sceneNumber: number = 1,
   dialogueText: string = "",
   audioPrompt: string = "",
-  characters?: any[]
+  characters?: any[],
+  startingImageBase64?: string
 ): Promise<string> {
   const dir = path.dirname(outputPath);
   if (!fs.existsSync(dir)) {
@@ -667,7 +906,7 @@ export async function generateVisual(
   // Wrap entire visual generation with timeout
   try {
     return await withTimeout(
-      generateVisualWithTimeout(enhancedPrompt, videoOutputPath, sceneNumber, characters),
+      generateVisualWithTimeout(enhancedPrompt, videoOutputPath, sceneNumber, characters, startingImageBase64),
       VEO_POLL_TIMEOUT,
       `Veo video generation for Scene ${sceneNumber}`
     );
@@ -681,7 +920,64 @@ async function generateVisualWithTimeout(
   enhancedPrompt: string,
   videoOutputPath: string,
   sceneNumber: number,
-  characters?: any[]
+  characters?: any[],
+  startingImageBase64?: string
+): Promise<string> {
+  let useCharacters = true;
+  let useStartingImage = true;
+
+  for (let strategy = 1; strategy <= 4; strategy++) {
+    try {
+      console.log(`[Veo Safety Retry] Strategy ${strategy} for Scene ${sceneNumber}: useCharacters=${useCharacters}, useStartingImage=${useStartingImage}`);
+      return await executeVeoGeneration(
+        enhancedPrompt,
+        videoOutputPath,
+        sceneNumber,
+        useCharacters ? characters : undefined,
+        useStartingImage ? startingImageBase64 : undefined
+      );
+    } catch (error: any) {
+      const errorMsg = error.message || String(error);
+      const isInputImageSafetyBlock = 
+        errorMsg.toLowerCase().includes("blocked by your current safety settings") || 
+        errorMsg.toLowerCase().includes("person/face generation") ||
+        errorMsg.toLowerCase().includes("input image contains content");
+
+      if (isInputImageSafetyBlock) {
+        console.warn(`[Veo Safety Block] Detected safety block on Strategy ${strategy} for Scene ${sceneNumber}. Error: ${errorMsg}`);
+        
+        if (strategy === 1) {
+          // Fallback to Strategy 2: Remove character reference images
+          useCharacters = false;
+          console.log(`[Veo Safety Fallback] Retrying without character reference images...`);
+          continue;
+        } else if (strategy === 2) {
+          // Fallback to Strategy 3: Restore characters, remove starting image
+          useCharacters = true;
+          useStartingImage = false;
+          console.log(`[Veo Safety Fallback] Retrying without starting image...`);
+          continue;
+        } else if (strategy === 3) {
+          // Fallback to Strategy 4: Remove both
+          useCharacters = false;
+          useStartingImage = false;
+          console.log(`[Veo Safety Fallback] Retrying without both characters and starting image...`);
+          continue;
+        }
+      }
+      // If it's not a safety block or we've run out of options, throw the error
+      throw error;
+    }
+  }
+  throw new Error("Veo 3.1 video generation failed after all safety fallback attempts.");
+}
+
+async function executeVeoGeneration(
+  enhancedPrompt: string,
+  videoOutputPath: string,
+  sceneNumber: number,
+  characters?: any[],
+  startingImageBase64?: string
 ): Promise<string> {
   // Strategy 0: Veo 3.1 — High Quality, Google DeepMind
   let operation;
@@ -718,15 +1014,33 @@ async function generateVisualWithTimeout(
     }
   }
 
+  const veoParams: any = {
+    model: "veo-3.1-fast-generate-001",
+    prompt: enhancedPrompt,
+    config,
+  };
+
+  if (startingImageBase64) {
+    const match = startingImageBase64.match(/^data:(image\/[a-zA-Z]+);base64,(.+)$/);
+    if (match) {
+      veoParams.image = {
+        mimeType: match[1],
+        imageBytes: match[2]
+      };
+    } else {
+      veoParams.image = {
+        mimeType: "image/jpeg",
+        imageBytes: startingImageBase64
+      };
+    }
+    console.log(`Included starting frame (image) in Veo request for Scene ${sceneNumber}.`);
+  }
+
   while (attempt < maxAttempts) {
     try {
       console.log(`Attempting video generation using veo-3.1-fast-generate-001 (Attempt ${attempt + 1}/${maxAttempts})...`);
       operation = await withTimeout(
-        ai.models.generateVideos({
-          model: "veo-3.1-fast-generate-001",
-          prompt: enhancedPrompt,
-          config,
-        }),
+        ai.models.generateVideos(veoParams),
         VEO_START_TIMEOUT,
         `Veo start for scene ${sceneNumber}`
       );

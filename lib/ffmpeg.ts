@@ -312,3 +312,27 @@ export async function concatenateClips(clipPaths: string[], outputPath: string):
     }
   });
 }
+
+export function extractLastFrame(videoPath: string, outputPath: string): Promise<string> {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const duration = await getVideoDuration(videoPath);
+      const seekTime = Math.max(0, duration - 0.2); // Seek 0.2 seconds before the end
+      const ffmpeg = resolveFFmpeg();
+      // Extract one frame at seekTime
+      const command = `${ffmpeg} -y -ss ${seekTime} -i "${videoPath}" -vframes 1 -q:v 2 "${outputPath}"`;
+      
+      console.log(`FFmpeg: Extracting last frame at ${seekTime}s of ${videoPath} to ${outputPath}`);
+      exec(command, (error, stdout, stderr) => {
+        if (error) {
+          console.error("extractLastFrame failed:", error);
+          return reject(error);
+        }
+        resolve(outputPath);
+      });
+    } catch (e) {
+      reject(e);
+    }
+  });
+}
+

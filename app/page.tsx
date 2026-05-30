@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { HeroBackground } from "@/components/landing/hero-background";
 import { AnimatedButton } from "@/components/ui/animated-button";
@@ -123,13 +124,52 @@ export default function Home() {
       
       // Short delay for satisfying success animation before redirecting
       setTimeout(() => {
-        router.push(`/studio/${data.jobId}/script`);
+        const targetUrl = `/studio/${data.jobId}/script`;
+        console.log("Redirecting to:", targetUrl);
+        router.push(targetUrl);
+        
+        // Fallback to window.location.href if client-side navigation doesn't execute
+        setTimeout(() => {
+          if (window.location.pathname !== targetUrl) {
+            console.warn("router.push did not complete navigation, using window.location.href fallback.");
+            window.location.href = targetUrl;
+          }
+        }, 1500);
       }, 1000);
     } catch (err: any) {
       console.error(err);
       setStatus("error");
       setErrorMessage(err.message || "An unexpected error occurred. Please try again.");
       setTimeout(() => setStatus("idle"), 4000);
+    }
+  };
+
+  const handleDeleteMovie = async (jobId: string) => {
+    const confirmDelete = window.confirm(
+      "Are you sure you want to permanently delete this movie? This will delete all generated videos, images, narration, and associated data from disk."
+    );
+    if (!confirmDelete) return;
+
+    try {
+      const response = await fetch("/api/jobs", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ jobId }),
+      });
+
+      if (!response.ok) {
+        const data = await response.json();
+        alert(data.error || "Failed to delete movie.");
+        return;
+      }
+
+      // Refresh list locally
+      setMovies((prev) => prev.filter((m) => m.id !== jobId));
+    } catch (err: any) {
+      console.error(err);
+      alert("An unexpected error occurred while deleting the movie.");
     }
   };
 
@@ -328,18 +368,43 @@ export default function Home() {
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {movies.map((m) => (
-                <div key={m.id} className="bg-[#0a0a0f] border border-white/[0.08] hover:border-[#7c3aed]/50 transition-colors rounded-xl overflow-hidden shadow-xl">
-                  <video
-                    controls
-                    className="w-full h-56 object-cover bg-black"
-                    src={`/api/download/${m.id}?inline=true&t=${Date.now()}`}
-                  />
-                  <div className="p-4 text-left">
-                    <div className="text-sm font-semibold text-neutral-100 line-clamp-2 leading-relaxed">{m.prompt}</div>
-                    <div className="text-xs text-neutral-500 mt-3 flex items-center gap-2">
-                      <Sparkles className="h-3 w-3 text-[#7c3aed]"/>
-                      {new Date(m.createdAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}
+                <div key={m.id} className="relative bg-[#0a0a0f] border border-white/[0.08] hover:border-rose-500/30 transition-colors rounded-xl overflow-hidden shadow-xl flex flex-col justify-between group/card">
+                  <div>
+                    <div className="relative w-full h-52 bg-black">
+                      <video
+                        controls
+                        className="w-full h-full object-cover"
+                        src={`/api/download/${m.id}?inline=true`}
+                      />
+                      <button
+                        onClick={() => handleDeleteMovie(m.id)}
+                        className="absolute top-3 right-3 p-2 rounded-lg bg-black/60 hover:bg-rose-600/90 border border-white/[0.08] hover:border-rose-500 text-neutral-400 hover:text-white transition-all duration-300 opacity-0 group-hover/card:opacity-100 shadow-md cursor-pointer flex items-center justify-center"
+                        title="Delete Movie & Data"
+                      >
+                        <Trash2 className="h-4 w-4" />
+                      </button>
                     </div>
+                    <div className="p-4 text-left">
+                      <Link 
+                        href={`/studio/${m.id}/script`}
+                        className="text-sm font-semibold text-neutral-100 line-clamp-2 leading-relaxed hover:text-[#06b6d4] transition-colors cursor-pointer"
+                        title="Open Screenplay Desk"
+                      >
+                        {m.prompt}
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="px-4 pb-4 pt-1 flex items-center justify-between gap-2 text-xs">
+                    <span className="text-neutral-500 flex items-center gap-1.5 font-light">
+                      <Sparkles className="h-3.5 w-3.5 text-[#7c3aed]"/>
+                      {new Date(m.createdAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}
+                    </span>
+                    <Link
+                      href={`/studio/${m.id}/script`}
+                      className="text-[11px] font-bold text-[#06b6d4] hover:text-[#08e2ff] hover:underline flex items-center gap-1 transition-colors cursor-pointer"
+                    >
+                      Script Desk ↗
+                    </Link>
                   </div>
                 </div>
               ))}
