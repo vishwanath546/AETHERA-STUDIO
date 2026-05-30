@@ -71,7 +71,6 @@ export async function POST(request: Request) {
         estimatedDuration,
         audioPrompt,
         status: "queued" as const,
-        approved: existingScene ? (existingScene.approved ?? true) : true,
       };
     });
 

@@ -10,8 +10,7 @@ export interface Scene {
 }
 
 export interface SceneJob extends Scene {
-  status: "idle" | "queued" | "generating_image" | "generating_audio" | "assembling_clip" | "complete" | "error";
-  approved?: boolean;
+  status: "queued" | "generating_image" | "generating_audio" | "assembling_clip" | "complete" | "error";
   imagePath?: string;
   audioPath?: string;
   srtPath?: string;
@@ -36,8 +35,6 @@ export interface Job {
 
 const SAVE_PATH = path.join(process.cwd(), "temp", "job-store.json");
 
-let lastLoadedTime = 0;
-
 function loadJobsFromFile(): Map<string, Job> {
   const store = new Map<string, Job>();
   try {
@@ -50,8 +47,6 @@ function loadJobsFromFile(): Map<string, Job> {
         }
       }
       console.log(`Loaded ${store.size} jobs from disk cache.`);
-      const stats = fs.statSync(SAVE_PATH);
-      lastLoadedTime = stats.mtimeMs;
     }
   } catch (err) {
     console.error("Failed to load jobs from disk cache:", err);
@@ -83,38 +78,13 @@ if (process.env.NODE_ENV !== "production") {
   globalForJobs.jobStore = jobStore;
 }
 
-function syncStoreWithFile() {
-  try {
-    if (fs.existsSync(SAVE_PATH)) {
-      const stats = fs.statSync(SAVE_PATH);
-      if (stats.mtimeMs > lastLoadedTime) {
-        const freshStore = loadJobsFromFile();
-        jobStore.clear();
-        for (const [key, val] of freshStore.entries()) {
-          jobStore.set(key, val);
-        }
-        lastLoadedTime = stats.mtimeMs;
-        console.log("jobStore synced with disk cache due to file update.");
-      }
-    }
-  } catch (err) {
-    console.error("Failed to sync jobStore with file:", err);
-  }
-}
-
 export function getJob(id: string): Job | undefined {
-  syncStoreWithFile();
   return jobStore.get(id);
 }
 
 export function saveJob(job: Job): void {
   jobStore.set(job.id, job);
   saveJobsToFile(jobStore);
-  try {
-    if (fs.existsSync(SAVE_PATH)) {
-      lastLoadedTime = fs.statSync(SAVE_PATH).mtimeMs;
-    }
-  } catch (e) {}
 }
 
 export function updateJobStatus(id: string, status: Job["status"], error?: string): void {
@@ -146,10 +116,5 @@ export function updateSceneStatus(
     });
     saveJob(job);
   }
-}
-
-export function deleteJob(id: string): void {
-  jobStore.delete(id);
-  saveJobsToFile(jobStore);
 }
 

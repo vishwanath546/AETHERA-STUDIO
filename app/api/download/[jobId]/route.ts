@@ -26,14 +26,14 @@ export async function GET(
     const url = new URL(request.url);
     const isInline = url.searchParams.get("inline") === "true";
 
-    const stat = fs.statSync(filePath);
-
     const pathNormalized = filePath.replace(/\\/g, "/");
     const publicIndex = pathNormalized.indexOf("/public/temp/");
     if (isInline && publicIndex !== -1) {
       const relativeUrl = pathNormalized.substring(publicIndex + 7); // "/temp/..."
-      return NextResponse.redirect(new URL(`${relativeUrl}?v=${stat.mtimeMs}`, request.url));
+      return NextResponse.redirect(new URL(`${relativeUrl}?t=${Date.now()}`, request.url));
     }
+
+    const stat = fs.statSync(filePath);
     const fileStream = fs.createReadStream(filePath);
 
     // Support inline streaming in video player vs attachment download

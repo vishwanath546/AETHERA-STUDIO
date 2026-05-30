@@ -42,8 +42,8 @@ export default function ScreeningPage() {
         const data = await response.json();
 
         if (data.status !== "completed") {
-          // If not completed yet, push them back to script review board
-          router.push(`/studio/${jobId}/script`);
+          // If not completed yet, push them back to production status deck
+          router.push(`/studio/${jobId}/production`);
           return;
         }
 
@@ -106,7 +106,7 @@ export default function ScreeningPage() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Link
-              href={`/studio/${jobId}/script`}
+              href={`/studio/${jobId}/production`}
               className="p-2 rounded-lg bg-white/[0.02] border border-white/[0.05] hover:bg-white/[0.08] text-neutral-400 hover:text-white transition-colors"
             >
               <ChevronLeft className="h-4 w-4" />

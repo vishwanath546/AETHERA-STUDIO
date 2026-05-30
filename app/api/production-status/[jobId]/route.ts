@@ -67,8 +67,8 @@ export async function GET(
           return;
         }
 
-        // If completed, close connection
-        if (currentJob.status === "completed") {
+        // If completed or errored, close connection
+        if (currentJob.status === "completed" || currentJob.status === "error") {
           clearInterval(interval);
           active = false;
           try {

@@ -1486,6 +1486,78 @@
     }
   ],
   [
+    "307d3645-00e1-4d56-bb9b-b638aa4a4ca4",
+    {
+      "id": "307d3645-00e1-4d56-bb9b-b638aa4a4ca4",
+      "status": "completed",
+      "prompt": "A cinematic superhero transformation short film about a normal young boy transforming into a powerful futuristic superhero during a dangerous city attack. The film begins with a teenage boy standing alone in a dark alley during heavy rain while explosions and chaos happen across the city behind him. The boy looks scared but determined, breathing heavily with realistic facial expressions, emotional eyes, visible lip sync, natural body movement, and real human acting.\n\nSuddenly, mysterious glowing energy activates inside his body. Blue and red energy particles begin flowing through his veins while the ground vibrates around him. Futuristic holographic armor pieces appear from thin air and start assembling around his body with ultra detailed transformation animation and Hollywood-level VFX.\n\nMechanical armor parts fly toward him in slow motion, attaching piece by piece onto his arms, chest, legs, and face with sparks, glowing energy lines, nano-tech effects, electric pulses, rotating mechanical panels, metallic sound effects, and cinematic motion blur. His eyes begin glowing with powerful energy while the environment reacts to the transformation with flying debris, shockwaves, rain vaporizing, and dramatic lighting flashes.\n\nThe transformation sequence should feel epic like a billion-dollar superhero movie with realistic CGI, cinematic camera spins, dynamic close-up shots, macro mechanical details, and intense emotional soundtrack building toward climax. Add immersive sound design including armor assembly sounds, energy charging, electric crackles, heartbeat bass, thunder, metal impacts, futuristic AI system voice, deep cinematic booms, and explosive VFX transitions.\n\nAfter full transformation, the boy rises slowly into the air surrounded by glowing energy aura and smoke while his futuristic superhero suit shines with advanced technology and powerful reactor core lighting. He looks at his hands in disbelief before flying at extreme speed through the city skyline leaving energy trails behind him.\n\nFinal hero shot shows the superhero landing powerfully on top of a skyscraper during thunderstorm rain with cape movement, glowing eyes, cinematic lightning, and massive city view in the background. Ultra realistic visuals, blockbuster superhero cinematography, emotional storytelling, premium CGI, realistic physics, anamorphic lens flares, movie-level editing, and immersive VFX inspired by futuristic superhero transformation scenes from Iron Man, Man of Steel, and Black Panther. No narration or educational style — should feel like a real theatrical superhero movie transformation scene.",
+      "sceneCount": 4,
+      "scenes": [
+        {
+          "sceneNumber": 1,
+          "visualPrompt": "Slow Steadicam push-in from medium wide to tight medium. In a narrow, rain-drenched alleyway paved with cracked asphalt, LEO, a lanky 16-year-old boy with storm-cloud grey eyes and dark hair plastered to his forehead, stands cornered. He wears a soaked, unzipped dark grey hoodie over a thin black t-shirt and dark, wet denim jeans. His jaw trembles, and he exhales a shaky, steamy breath. The shot is captured with an anamorphic lens; the palette is desaturated city blues and blacks, punctuated by distant, fiery orange explosions and hard, wet reflections.",
+          "dialogueOrNarration": "NARRATOR: They say the world ends in fire. For me, it began in water and concrete.",
+          "estimatedDuration": 8,
+          "audioPrompt": "FOREGROUND: Shaky, panicked male breathing; individual raindrops dripping from a fire escape. MIDGROUND: Constant heavy rainfall on asphalt and metal dumpsters; distant muffled explosions and faint sirens. BACKGROUND: A low, anxious cello drone layered with a deep sub-bass rumble that vibrates.",
+          "status": "complete",
+          "imagePath": "c:\\AI-video-generation\\temp\\307d3645-00e1-4d56-bb9b-b638aa4a4ca4\\scene_1_raw.mp4",
+          "audioPath": "c:\\AI-video-generation\\temp\\307d3645-00e1-4d56-bb9b-b638aa4a4ca4\\scene_1.mp3",
+          "srtPath": "c:\\AI-video-generation\\temp\\307d3645-00e1-4d56-bb9b-b638aa4a4ca4\\scene_1.srt",
+          "clipPath": "c:\\AI-video-generation\\temp\\307d3645-00e1-4d56-bb9b-b638aa4a4ca4\\scene_1.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/307d3645-00e1-4d56-bb9b-b638aa4a4ca4/scene_1.mp4"
+        },
+        {
+          "sceneNumber": 2,
+          "visualPrompt": "Continuing as a static tight close-up on LEO's face. He is a lanky 16-year-old boy with storm-cloud grey eyes and dark hair plastered to his forehead, wearing a soaked grey hoodie. In this rain-drenched alley with desaturated cool tones, a single tear of crimson light escapes from the corner of his left eye. A spiderweb of cobalt blue veins illuminates under his pale skin around his temple and neck. Raindrops sizzle into steam as they approach his skin. Anamorphic lens captures the subtle glow and horizontal flares.",
+          "dialogueOrNarration": "NARRATOR: It wasn't a power I found. It was a fever that broke me.",
+          "estimatedDuration": 8,
+          "audioPrompt": "FOREGROUND: A low, guttural heartbeat thumps loudly; a high-frequency, resonant whine builds. MIDGROUND: The sizzle of rain vaporizing into steam; the ground begins to subtly rumble. BACKGROUND: The cello drone warps into a rising, unstable synth arpeggio, like a particle accelerator spooling up.",
+          "status": "complete",
+          "imagePath": "c:\\AI-video-generation\\temp\\307d3645-00e1-4d56-bb9b-b638aa4a4ca4\\scene_2_raw.mp4",
+          "audioPath": "c:\\AI-video-generation\\temp\\307d3645-00e1-4d56-bb9b-b638aa4a4ca4\\scene_2.mp3",
+          "srtPath": "c:\\AI-video-generation\\temp\\307d3645-00e1-4d56-bb9b-b638aa4a4ca4\\scene_2.srt",
+          "clipPath": "c:\\AI-video-generation\\temp\\307d3645-00e1-4d56-bb9b-b638aa4a4ca4\\scene_2.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/307d3645-00e1-4d56-bb9b-b638aa4a4ca4/scene_2.mp4"
+        },
+        {
+          "sceneNumber": 3,
+          "visualPrompt": "A dynamic, low-angle orbital shot begins, pulling back slightly. In the rain-drenched alley, LEO, the 16-year-old in a grey hoodie, is enveloped by force. Gunmetal and obsidian armor pieces materialize, slamming into his torso and shoulders, sending out visible shockwaves of displaced air. Nano-filaments weave a second skin over his knuckles. The camera orbits as a chest plate locks into place, glowing with internal crimson light. Anamorphic lens flares streak across the frame with each metallic impact, illuminating the desaturated, chaotic scene.",
+          "dialogueOrNarration": "NARRATOR: The boy I was dissolved into the language of the machine.",
+          "estimatedDuration": 8,
+          "audioPrompt": "FOREGROUND: A symphony of sharp, percussive metallic slams; high-pitched servo whirs and the crackle of energy. MIDGROUND: Debris skittering across asphalt; the rumble of the ground intensifies. BACKGROUND: A driving, industrial rhythm track joins the synth, punctuated by deep cinematic booms.",
+          "status": "complete",
+          "imagePath": "c:\\AI-video-generation\\temp\\307d3645-00e1-4d56-bb9b-b638aa4a4ca4\\scene_3_raw.mp4",
+          "audioPath": "c:\\AI-video-generation\\temp\\307d3645-00e1-4d56-bb9b-b638aa4a4ca4\\scene_3.mp3",
+          "srtPath": "c:\\AI-video-generation\\temp\\307d3645-00e1-4d56-bb9b-b638aa4a4ca4\\scene_3.srt",
+          "clipPath": "c:\\AI-video-generation\\temp\\307d3645-00e1-4d56-bb9b-b638aa4a4ca4\\scene_3.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/307d3645-00e1-4d56-bb9b-b638aa4a4ca4/scene_3.mp4"
+        },
+        {
+          "sceneNumber": 4,
+          "visualPrompt": "The camera motion resolves into a crane shot, rising from a low angle. The alley's chaos subsides. LEO, now fully encased in chrysalis-like gunmetal armor, floats a foot above the fractured asphalt. The armor glows with a faint internal light. He slowly raises his new gauntleted hands, looking at them with a sense of profound disbelief. His eyes, visible through the helmet's visor, burn with pure energy. The camera cranes up and back as he ascends silently, a terrifyingly beautiful silhouette against the stormy, desaturated city night.",
+          "dialogueOrNarration": "NARRATOR: Fear was the cocoon. This... is the declaration.",
+          "estimatedDuration": 8,
+          "audioPrompt": "FOREGROUND: A sudden cut to a single, deep, ethereal hum from the armor; the faint, high-tech rustle of articulated panels. A final, distant thunderclap. MIDGROUND: The heavy rain has subsided to a light, almost silent drizzle. BACKGROUND: All percussive music cuts out, replaced by a single, sustained, awe-inspiring choral note.",
+          "status": "complete",
+          "imagePath": "c:\\AI-video-generation\\temp\\307d3645-00e1-4d56-bb9b-b638aa4a4ca4\\scene_4_raw.mp4",
+          "audioPath": "c:\\AI-video-generation\\temp\\307d3645-00e1-4d56-bb9b-b638aa4a4ca4\\scene_4.mp3",
+          "srtPath": "c:\\AI-video-generation\\temp\\307d3645-00e1-4d56-bb9b-b638aa4a4ca4\\scene_4.srt",
+          "clipPath": "c:\\AI-video-generation\\temp\\307d3645-00e1-4d56-bb9b-b638aa4a4ca4\\scene_4.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/307d3645-00e1-4d56-bb9b-b638aa4a4ca4/scene_4.mp4"
+        }
+      ],
+      "createdAt": "2026-05-25T11:16:26.554Z",
+      "finalVideoPath": "c:\\AI-video-generation\\temp\\307d3645-00e1-4d56-bb9b-b638aa4a4ca4\\final_movie.mp4",
+      "gcsFinalUrl": "gs://ai-movie-497317-assets/jobs/307d3645-00e1-4d56-bb9b-b638aa4a4ca4/final_movie.mp4",
+      "sceneSequence": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  [
     "7ff63919-7fc3-43dd-8ee0-72c15524ab4f",
     {
       "id": "7ff63919-7fc3-43dd-8ee0-72c15524ab4f",
@@ -1543,6 +1615,106 @@
         }
       ],
       "createdAt": "2026-05-25T13:21:58.066Z"
+    }
+  ],
+  [
+    "e631915e-8daf-46d3-bfbd-88fd315600fe",
+    {
+      "id": "e631915e-8daf-46d3-bfbd-88fd315600fe",
+      "status": "completed",
+      "prompt": "Create a high-energy cinematic commercial for a futuristic energy drink brand.\nStyle inspired by premium VFX beverage advertisements, ultra-realistic CGI, dramatic slow motion, powerful cinematic transitions, and luxury commercial cinematography.\n\nVIDEO FORMAT:\n16:9 widescreen, 4K ultra HD, 24fps cinematic motion, HDR lighting, high contrast, epic commercial pacing.\n\nSCENE 1 — DARK INTRO\nBlack screen. Deep cinematic bass sound. Tiny electric blue particles slowly appear in darkness. Atmospheric smoke moving softly. A glowing blue energy pulse emerges in the center of the frame.\n\nSCENE 2 — CAN REVEAL\nA chilled futuristic black-and-blue energy drink can slowly rotates in mid-air. Water droplets and condensation visible in extreme detail. Blue neon rim lighting. Camera performs smooth macro cinematic movements around the can. Dramatic volumetric lighting and fog in background.\n\nSCENE 3 — EXPLOSIVE SPLASH SEQUENCE\nTwo energy drink cans burst open simultaneously from opposite sides in ultra slow motion. Massive water splash collision forms an energy wave in the center. Floating lemons and ice cubes spinning through the air. Electric lightning flashes behind the splash. Hyper-realistic fluid simulation, cinematic splash physics, macro lens look.\n\nSCENE 4 — ENERGY TRANSFORMATION\nBlue electric energy flows around the can like plasma. The environment becomes brighter with intense lightning effects. The can levitates while glowing energy rings rotate around it. Shockwave distortion spreads outward. Epic camera spin around the product.\n\nSCENE 5 — PRODUCT HERO SHOT\nThe energy drink can lands powerfully on reflective black surface surrounded by cold smoke and falling water droplets. Neon blue lion logo glows behind the product. Dramatic hero lighting. Water splashes upward on impact in slow motion.\n\nSCENE 6 — FINAL BRANDING\nCamera slowly pushes toward the glowing can while electric sparks move around it. Background fades into dark cinematic blue atmosphere. Large glowing text appears:\n“UNLEASH THE ENERGY”\n\nVisual style:\nHyper realistic, premium beverage commercial, Hollywood VFX, Unreal Engine 5 quality, cinematic lighting, dramatic reflections, photorealistic water physics, ultra detailed textures, high-speed camera look, volumetric fog, electric blue neon aesthetic, realistic condensation, macro product cinematography, luxury ad style.\n\nAudio Style:\nDeep bass hits, cinematic whooshes, thunder impacts, electric crackling sounds, dramatic trailer music buildup.\n\nNegative Prompt:\nlow quality, blurry, cartoon, distorted can, bad anatomy, low resolution, unrealistic water, noisy image, oversaturated, text artifacts, watermark, duplicated objects, flat lighting, poor reflections.",
+      "sceneCount": 6,
+      "scenes": [
+        {
+          "sceneNumber": 1,
+          "visualPrompt": "Absolute blackness. A slow Steadicam push-in towards the center of the void. From nothing, motes of sentient cerulean plasma begin to coalesce, drifting like deep-sea bioluminescence. The camera's movement is imperceptibly slow. At the end of the shot, a single, rhythmic pulse of brilliant blue light emanates from the center, revealing whispers of atmospheric smoke and casting long, soft shadows into the void. Fine digital grain, desaturated cool tones. Lighting is a single, internal source pulse. The shot is 8 seconds of continuous, hypnotic drift forward.",
+          "dialogueOrNarration": "NARRATOR: Before the beginning... there was a promise.",
+          "estimatedDuration": 8,
+          "audioPrompt": "FOREGROUND: Deep, bone-rattling subterranean hum that grows in intensity. MIDGROUND: Faint, airy whispers of moving smoke. BACKGROUND: A single, deep synth bass pulse, timed to the final flash of light, with a long decay.",
+          "status": "complete",
+          "imagePath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_1_raw.mp4",
+          "audioPath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_1.mp3",
+          "srtPath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_1.srt",
+          "clipPath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_1.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/e631915e-8daf-46d3-bfbd-88fd315600fe/scene_1.mp4"
+        },
+        {
+          "sceneNumber": 2,
+          "visualPrompt": "The pulse of blue light from the previous scene fades, revealing its source: a monolithic 16oz can of matte, anodized black aluminum. An intimate macro camera shot caresses its form, tracking microscopic beads of condensation as they crawl across the flawless surface, which absorbs all light. The can rotates with the slow, deliberate grace of a planet in orbit, its precise cerulean blue geometric accents catching a single, hard rim light from camera left. Anamorphic lens, shallow depth of field, oval bokeh in the deep fog background.",
+          "dialogueOrNarration": "NARRATOR: A vessel, forged in silence and cold.",
+          "estimatedDuration": 8,
+          "audioPrompt": "FOREGROUND: Faint, crisp sizzle and hiss of condensation forming on cold aluminum. MIDGROUND: The subterranean hum continues, now a steady low-frequency drone. BACKGROUND: A tense, high-register string drone slowly fades in over the synth bass.",
+          "status": "complete",
+          "imagePath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_2_raw.mp4",
+          "audioPath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_2.mp3",
+          "srtPath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_2.srt",
+          "clipPath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_2.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/e631915e-8daf-46d3-bfbd-88fd315600fe/scene_2.mp4"
+        },
+        {
+          "sceneNumber": 3,
+          "visualPrompt": "Match-on-action from the can's rotation. Two streams of hyper-realistic cerulean liquid violently rupture from off-screen left and right, colliding dead center in ultra-slow motion. The camera, now static, captures the impact creating a frozen wave of pure energy. Time is fragmented. Fractured lemon wedges and pristine, geometric ice cubes are trapped in the crystalline ballet of the splash. Hyper-real lightning spiders across the deep black background. Macro lens detail on the liquid dynamics, capturing every suspended droplet.",
+          "dialogueOrNarration": "NARRATOR: Then, the first crack in the stillness.",
+          "estimatedDuration": 8,
+          "audioPrompt": "FOREGROUND: A violent, sharp CRACK followed by the deep, bass-heavy WHOOSH of liquid moving in extreme slow motion. MIDGROUND: Distant, muffled thunderclaps that echo the lightning flashes. BACKGROUND: Music explodes into a powerful, percussive orchestral hit with distorted synth layers, then holds.",
+          "status": "complete",
+          "imagePath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_3_raw.mp4",
+          "audioPath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_3.mp3",
+          "srtPath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_3.srt",
+          "clipPath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_3.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/e631915e-8daf-46d3-bfbd-88fd315600fe/scene_3.mp4"
+        },
+        {
+          "sceneNumber": 4,
+          "visualPrompt": "The liquid supernova from the previous scene coalesces, wrapping around and reforming the monolithic 16oz can of matte, anodized black aluminum with cerulean accents, now levitating mid-frame. Tendrils of liquid plasma sizzle across its surface. The world bleaches with intense light as Saturn-like rings of pure blue energy rotate around the can. The camera performs a smooth, zero-gravity orbital move around the can as a visible shockwave, a ripple in space-time, expands outward, distorting the background. Lighting is now overwhelmingly bright, emanating from the can itself.",
+          "dialogueOrNarration": "NARRATOR: A current, unbound. A law of its own making.",
+          "estimatedDuration": 8,
+          "audioPrompt": "FOREGROUND: Sizzling, high-frequency plasma and electrical arcing sounds. MIDGROUND: A deep bass drop accompanies the shockwave, followed by a time-bending reverse cymbal effect. BACKGROUND: The music shifts to a driving, pulsing 808 bass with glitchy synth arpeggios.",
+          "status": "complete",
+          "imagePath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_4_raw.mp4",
+          "audioPath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_4.mp3",
+          "srtPath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_4.srt",
+          "clipPath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_4.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/e631915e-8daf-46d3-bfbd-88fd315600fe/scene_4.mp4"
+        },
+        {
+          "sceneNumber": 5,
+          "visualPrompt": "A continuous descending shot follows the levitating monolithic 16oz can of matte, anodized black aluminum. It collides with a black obsidian surface in dramatic slow motion. The impact sends a shockwave of water splashing upwards in a perfect, liquid crown. Cold smoke boils from the point of contact, rolling around the base of the can. In the background, a neon blue lion logo etched in light burns with an inner fire, casting dramatic, god-like rays through the smoke and mist. Lighting is high-contrast, from the neon logo behind.",
+          "dialogueOrNarration": "NARRATOR: It finds its form. An icon on an altar of its own creation.",
+          "estimatedDuration": 8,
+          "audioPrompt": "FOREGROUND: A deep, resonant THUD as the can impacts the surface, followed by the crisp sound of water splashing upwards in slow motion. MIDGROUND: The hiss of cold smoke boiling. BACKGROUND: The music cuts completely, leaving only the deep hum of the neon logo and the decaying echo of the impact.",
+          "status": "complete",
+          "imagePath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_5_raw.mp4",
+          "audioPath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_5.mp3",
+          "srtPath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_5.srt",
+          "clipPath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_5.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/e631915e-8daf-46d3-bfbd-88fd315600fe/scene_5.mp4"
+        },
+        {
+          "sceneNumber": 6,
+          "visualPrompt": "A slow, hypnotic Steadicam push-in on the monolithic 16oz can of matte, anodized black aluminum, now resting on the obsidian altar. The background dissolves into a deep cosmic blue void. The last dying embers of creation—faint electric sparks—flicker and die around the can. The liquid crown of water slowly settles. The god-rays from the off-screen neon lion soften and fade. The shot ends on an extreme close-up of the can's flawless, cold surface. Desaturated cool tones, shallow f/1.4 depth of field, fine digital grain.",
+          "dialogueOrNarration": "NARRATOR: The power was never contained. It was waiting.",
+          "estimatedDuration": 8,
+          "audioPrompt": "FOREGROUND: Faint, dying electric crackles and pops, fizzling into silence. MIDGROUND: The low neon hum fades out completely. BACKGROUND: A single, resonant piano note with heavy reverb hangs in the air for the duration of the shot, then fades to absolute silence.",
+          "status": "complete",
+          "imagePath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_6_raw.mp4",
+          "audioPath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_6.mp3",
+          "srtPath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_6.srt",
+          "clipPath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\scene_6.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/e631915e-8daf-46d3-bfbd-88fd315600fe/scene_6.mp4"
+        }
+      ],
+      "createdAt": "2026-05-25T13:22:31.051Z",
+      "finalVideoPath": "c:\\AI-video-generation\\temp\\e631915e-8daf-46d3-bfbd-88fd315600fe\\final_movie.mp4",
+      "gcsFinalUrl": "gs://ai-movie-497317-assets/jobs/e631915e-8daf-46d3-bfbd-88fd315600fe/final_movie.mp4",
+      "sceneSequence": [
+        1,
+        2,
+        5,
+        3,
+        4,
+        6
+      ]
     }
   ],
   [
@@ -1798,6 +1970,63 @@
     }
   ],
   [
+    "31b1713a-638a-476c-a124-3867c168b93d",
+    {
+      "id": "31b1713a-638a-476c-a124-3867c168b93d",
+      "status": "completed",
+      "prompt": "A funny cinematic animated short film about a clever fox trying to trick a proud crow holding a piece of cheese on a tree branch. The fox speaks smoothly with charming realistic voice acting, funny expressions, visible lip sync, sly laughter, and dramatic body language. The crow reacts proudly with emotional expressions, blinking eyes, head movements, and natural bird sounds.\n\nThe fox flatters the crow continuously, praising her beauty and asking her to sing. The crow becomes excited and proudly opens her mouth to sing loudly, accidentally dropping the cheese. The fox catches it instantly and laughs victoriously while the embarrassed crow realizes the trick.\n\nAdd cinematic forest atmosphere, realistic bird sounds, funny orchestra soundtrack, leaves moving, comedic timing, exaggerated reactions, dramatic zoom shots, and immersive sound effects. Pixar-level animation with emotional acting, natural conversations, and real theatrical cartoon movie feeling.",
+      "sceneCount": 3,
+      "scenes": [
+        {
+          "sceneNumber": 1,
+          "visualPrompt": "Pixar-level animation of a cinematic forest with moving leaves. A clever fox with funny expressions and dramatic body language sees a proud crow holding a piece of cheese on a tree branch. The crow has emotional expressions and blinking eyes. Dramatic zoom shot as the fox looks up at the crow.",
+          "dialogueOrNarration": "FOX: My goodness! What a magnificent bird I see! Such glorious feathers, such a regal posture. You are truly a queen among crows.",
+          "estimatedDuration": 10,
+          "audioPrompt": "Cinematic forest atmosphere, realistic bird sounds, and a funny orchestra soundtrack begins. The fox speaks with a smooth, charming realistic voice.",
+          "status": "complete",
+          "imagePath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\31b1713a-638a-476c-a124-3867c168b93d\\scene_1_raw.mp4",
+          "audioPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\31b1713a-638a-476c-a124-3867c168b93d\\scene_1.mp3",
+          "srtPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\31b1713a-638a-476c-a124-3867c168b93d\\scene_1.srt",
+          "clipPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\31b1713a-638a-476c-a124-3867c168b93d\\scene_1.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/31b1713a-638a-476c-a124-3867c168b93d/scene_1.mp4"
+        },
+        {
+          "sceneNumber": 2,
+          "visualPrompt": "Pixar-level animation. The clever fox continues flattering the proud crow with exaggerated reactions and dramatic body language. The crow becomes excited, puffs up its chest, and makes proud head movements. The crow becomes excited and proudly opens her mouth to sing loudly, accidentally dropping the cheese.",
+          "dialogueOrNarration": "FOX: I am certain a voice that matches such beauty would be the most divine sound in this forest! Oh, please, grant me just one song! CROW: (A very loud, proud caw!)",
+          "estimatedDuration": 12,
+          "audioPrompt": "Funny orchestra soundtrack builds with comedic timing. The fox speaks with a charming voice and visible lip sync. The crow makes excited natural bird sounds, then a loud caw. Immersive sound effects of the cheese dropping.",
+          "status": "complete",
+          "imagePath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\31b1713a-638a-476c-a124-3867c168b93d\\scene_2_raw.mp4",
+          "audioPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\31b1713a-638a-476c-a124-3867c168b93d\\scene_2.mp3",
+          "srtPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\31b1713a-638a-476c-a124-3867c168b93d\\scene_2.srt",
+          "clipPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\31b1713a-638a-476c-a124-3867c168b93d\\scene_2.mp4"
+        },
+        {
+          "sceneNumber": 3,
+          "visualPrompt": "Pixar-level animation. The clever fox catches the cheese instantly in his mouth. He laughs victoriously with funny, sly expressions and visible lip sync. On the branch, the embarrassed crow realizes the trick with exaggerated emotional reactions and sad blinking eyes.",
+          "dialogueOrNarration": "FOX: (Sly laughter) A wonderful performance! And thank you for the cheese!",
+          "estimatedDuration": 8,
+          "audioPrompt": "Immersive sound effect of the fox catching the cheese. The fox's victorious, sly laughter with realistic voice acting. The funny orchestra soundtrack hits a comedic climax. The crow makes realistic, embarrassed bird sounds.",
+          "status": "complete",
+          "imagePath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\31b1713a-638a-476c-a124-3867c168b93d\\scene_3_raw.mp4",
+          "audioPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\31b1713a-638a-476c-a124-3867c168b93d\\scene_3.mp3",
+          "srtPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\31b1713a-638a-476c-a124-3867c168b93d\\scene_3.srt",
+          "clipPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\31b1713a-638a-476c-a124-3867c168b93d\\scene_3.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/31b1713a-638a-476c-a124-3867c168b93d/scene_3.mp4"
+        }
+      ],
+      "createdAt": "2026-05-27T07:18:14.804Z",
+      "finalVideoPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\31b1713a-638a-476c-a124-3867c168b93d\\final_movie.mp4",
+      "gcsFinalUrl": "gs://ai-movie-497317-assets/jobs/31b1713a-638a-476c-a124-3867c168b93d/final_movie.mp4",
+      "sceneSequence": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  [
     "0424ada1-9a35-4e4e-b553-17af6407d71d",
     {
       "id": "0424ada1-9a35-4e4e-b553-17af6407d71d",
@@ -1861,6 +2090,164 @@
       "createdAt": "2026-05-27T07:34:56.954Z",
       "finalVideoPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\0424ada1-9a35-4e4e-b553-17af6407d71d\\final_movie.mp4",
       "gcsFinalUrl": "gs://ai-movie-497317-assets/jobs/0424ada1-9a35-4e4e-b553-17af6407d71d/final_movie.mp4",
+      "sceneSequence": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  [
+    "78505061-9aac-44ac-aeb3-4af168235156",
+    {
+      "id": "78505061-9aac-44ac-aeb3-4af168235156",
+      "status": "completed",
+      "prompt": "A premium cinematic sports shoe advertisement featuring real human athletes, ultra realistic visuals, Hollywood-level cinematography, powerful motivation, and high-energy sports action. The advertisement begins before sunrise in a dark urban city where dedicated athletes wake up early to train while the world is still sleeping. Slow-motion shots of runners tying shoelaces, basketball players stretching, football players preparing, gym athletes wrapping hands, and sprinters breathing heavily before training.\n\nThe camera focuses on the sports shoes with ultra detailed cinematic close-up shots — textured fabric, air cushioning, sole grip, sweat droplets falling, dust particles, neon reflections, and realistic movement while athletes run, jump, sprint, and train intensely.\n\nAs the beat drops, the athletes explode into action. Dynamic scenes show:\n\n* runners sprinting through rainy city streets\n* basketball players performing powerful dunks\n* football players training aggressively\n* gym athletes lifting heavy weights\n* parkour athletes jumping across rooftops\n* slow-motion running shots on tracks at sunset\n\nEvery movement should feel powerful, emotional, and inspiring like a world-class Nike or Adidas commercial.\n\nAdd cinematic VFX enhancements:\n\n* glowing speed trails behind runners\n* slow-motion sweat particles\n* dust explosions during foot impact\n* cinematic motion blur\n* energy pulse effects during jumps\n* dramatic lighting transitions\n* rain splashes in ultra slow motion\n* floating chalk particles in gym scenes\n\nReal human acting with emotional intensity, determined facial expressions, visible breathing, sweat, pain, focus, and victory emotions. Athletes encourage each other with realistic dialogue, shouting, laughter, and motivational energy. No overacting — natural cinematic performance like a real sports commercial.\n\nAdd immersive sound design:\n\n* powerful footsteps\n* shoe grip sounds on ground\n* heartbeat bass\n* breathing sounds\n* crowd cheering\n* gym ambience\n* rain impacts\n* basketball bounce echoes\n* whistle sounds\n* motivational cinematic soundtrack with strong bass and emotional rise\n\nFinal hero sequence shows all athletes running together in slow motion through a stadium tunnel toward bright light while the camera captures the sports shoes in dramatic close-up shots. End with powerful cinematic product reveal of the sports shoes rotating in dark environment with smoke, lighting effects, and premium branding atmosphere.\n\nUltra realistic commercial quality, luxury sports brand aesthetic, cinematic color grading, anamorphic lens flare, drone shots, dynamic tracking camera movement, blockbuster advertisement feel inspired by iconic sports commercials and modern athletic campaigns. No cartoon style, no narration-heavy explanation, should feel like a real billion-dollar global sports brand advertisement.",
+      "sceneCount": 5,
+      "scenes": [
+        {
+          "sceneNumber": 1,
+          "visualPrompt": "A premium cinematic sports shoe advertisement with ultra realistic visuals and real human athletes. Before sunrise in a dark urban city. Slow-motion shots of dedicated athletes preparing: runners tying shoelaces, basketball players stretching, football players preparing, gym athletes wrapping hands, and sprinters breathing heavily. Ultra detailed cinematic close-up shots of the sports shoes: textured fabric, air cushioning, sole grip, sweat droplets falling, dust particles, neon reflections.",
+          "dialogueOrNarration": "",
+          "estimatedDuration": 8,
+          "audioPrompt": "Motivational cinematic soundtrack starting subtly, ambient city sounds, gentle breathing sounds, sounds of shoelaces being tied.",
+          "status": "complete",
+          "imagePath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\scene_1_raw.mp4",
+          "audioPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\scene_1.mp3",
+          "srtPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\scene_1.srt",
+          "clipPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\scene_1.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/78505061-9aac-44ac-aeb3-4af168235156/scene_1.mp4"
+        },
+        {
+          "sceneNumber": 2,
+          "visualPrompt": "A premium cinematic sports shoe advertisement with ultra realistic visuals and real human athletes. The athletes explode into action. Dynamic scenes of runners sprinting through rainy city streets with glowing speed trails behind them. Basketball players perform powerful dunks. Cinematic VFX enhancements: rain splashes in ultra slow motion, cinematic motion blur, dramatic lighting transitions. Determined facial expressions, visible breathing, and sweat.",
+          "dialogueOrNarration": "[Athletes shouting with effort]",
+          "estimatedDuration": 7,
+          "audioPrompt": "Motivational cinematic soundtrack with a strong beat drop and bass. Powerful footsteps, shoe grip sounds on a wet street, basketball bounce echoes, rain impacts.",
+          "status": "complete",
+          "imagePath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\scene_2_raw.mp4",
+          "audioPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\scene_2.mp3",
+          "srtPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\scene_2.srt",
+          "clipPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\scene_2.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/78505061-9aac-44ac-aeb3-4af168235156/scene_2.mp4"
+        },
+        {
+          "sceneNumber": 3,
+          "visualPrompt": "A premium cinematic sports shoe advertisement with ultra realistic visuals and real human athletes. High-energy sports action continues. Football players training aggressively with dust explosions during foot impact. Gym athletes lifting heavy weights with floating chalk particles in the air. Parkour athletes jumping across rooftops with energy pulse effects during jumps. Real human acting with emotional intensity, focus, and pain.",
+          "dialogueOrNarration": "[Motivational shouts and grunts of exertion]",
+          "estimatedDuration": 7,
+          "audioPrompt": "Intense motivational soundtrack continues to build. Heartbeat bass, heavy breathing sounds, gym ambience with weights clanking, whistle sounds.",
+          "status": "complete",
+          "imagePath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\scene_3_raw.mp4",
+          "audioPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\scene_3.mp3",
+          "srtPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\scene_3.srt",
+          "clipPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\scene_3.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/78505061-9aac-44ac-aeb3-4af168235156/scene_3.mp4"
+        },
+        {
+          "sceneNumber": 4,
+          "visualPrompt": "A premium cinematic sports shoe advertisement with ultra realistic visuals and real human athletes. Slow-motion running shots on tracks at sunset with anamorphic lens flare. Final hero sequence: all athletes run together in slow motion through a stadium tunnel toward a bright light. The dynamic tracking camera captures the sports shoes in dramatic close-up shots. Athletes show victory emotions, encouraging each other with laughter and smiles.",
+          "dialogueOrNarration": "[Sounds of laughter and encouragement]",
+          "estimatedDuration": 6,
+          "audioPrompt": "Motivational cinematic soundtrack reaches an emotional, rising crescendo. Crowd cheering sounds faintly in the distance, powerful footsteps in unison.",
+          "status": "complete",
+          "imagePath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\scene_4_raw.mp4",
+          "audioPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\scene_4.mp3",
+          "srtPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\scene_4.srt",
+          "clipPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\scene_4.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/78505061-9aac-44ac-aeb3-4af168235156/scene_4.mp4"
+        },
+        {
+          "sceneNumber": 5,
+          "visualPrompt": "A premium cinematic sports shoe advertisement with a luxury sports brand aesthetic. Powerful cinematic product reveal. The sports shoes rotate in a dark environment with smoke, dramatic lighting effects, and a premium branding atmosphere. Ultra realistic commercial quality with cinematic color grading.  shoe brand name is victories so create shows branding accordingly with brand logo",
+          "dialogueOrNarration": "",
+          "estimatedDuration": 5,
+          "audioPrompt": "The motivational soundtrack hits its final powerful note and fades, leaving a deep bass hum and subtle whoosh sound effects for the product rotation.",
+          "status": "complete",
+          "imagePath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\scene_5_raw.mp4",
+          "audioPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\scene_5.mp3",
+          "srtPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\scene_5.srt",
+          "clipPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\scene_5.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/78505061-9aac-44ac-aeb3-4af168235156/scene_5.mp4"
+        }
+      ],
+      "createdAt": "2026-05-27T07:47:47.884Z",
+      "finalVideoPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\78505061-9aac-44ac-aeb3-4af168235156\\final_movie.mp4",
+      "gcsFinalUrl": "gs://ai-movie-497317-assets/jobs/78505061-9aac-44ac-aeb3-4af168235156/final_movie.mp4",
+      "sceneSequence": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  [
+    "4c4636e9-a4d3-4fce-a032-889f116b404c",
+    {
+      "id": "4c4636e9-a4d3-4fce-a032-889f116b404c",
+      "status": "completed",
+      "prompt": "A stylish cinematic shoe advertisement featuring a young athlete wearing premium sports shoes while running through modern city streets at sunrise. Ultra realistic visuals, smooth slow-motion running shots, close-up shots of the shoes hitting the ground, detailed shoe texture, dust particles, sweat, and dynamic camera movement.\n\nShow athletes running, jumping, training, and walking confidently with energetic expressions and natural movement. Add cinematic lighting, motion blur, speed ramp effects, and subtle VFX like glowing speed trails and dust impact effects while running.\n\nInclude realistic sound effects like footsteps, breathing, shoe grip sounds, heartbeat bass, and energetic motivational background music. End with a dramatic close-up product shot of the shoes rotating in dark background with smoke and spotlight lighting.\n\nLuxury sports brand aesthetic, clean commercial style, realistic human actors, modern fashion vibe, premium advertisement quality, inspired by high-end sports shoe commercials.",
+      "sceneCount": 4,
+      "scenes": [
+        {
+          "sceneNumber": 1,
+          "visualPrompt": "Ultra realistic visuals of a young athlete wearing premium sports shoes running through modern city streets at sunrise. Smooth slow-motion running shots. Cinematic lighting and a modern fashion vibe. Luxury sports brand aesthetic.",
+          "dialogueOrNarration": "",
+          "estimatedDuration": 5,
+          "audioPrompt": "Energetic motivational background music starts, realistic sound effects of breathing and soft footsteps on pavement.",
+          "status": "complete",
+          "imagePath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\4c4636e9-a4d3-4fce-a032-889f116b404c\\scene_1_raw.mp4",
+          "audioPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\4c4636e9-a4d3-4fce-a032-889f116b404c\\scene_1.mp3",
+          "srtPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\4c4636e9-a4d3-4fce-a032-889f116b404c\\scene_1.srt",
+          "clipPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\4c4636e9-a4d3-4fce-a032-889f116b404c\\scene_1.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/4c4636e9-a4d3-4fce-a032-889f116b404c/scene_1.mp4"
+        },
+        {
+          "sceneNumber": 2,
+          "visualPrompt": "Ultra realistic visuals of the same young athlete wearing premium sports shoes, now jumping and training with energetic expressions. Dynamic camera movement with speed ramp effects and subtle VFX like glowing speed trails. Luxury sports brand aesthetic, modern city setting.",
+          "dialogueOrNarration": "",
+          "estimatedDuration": 5,
+          "audioPrompt": "Energetic motivational music continues with a rising tempo, heartbeat bass, shoe grip sounds.",
+          "status": "complete",
+          "imagePath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\4c4636e9-a4d3-4fce-a032-889f116b404c\\scene_2_raw.mp4",
+          "audioPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\4c4636e9-a4d3-4fce-a032-889f116b404c\\scene_2.mp3",
+          "srtPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\4c4636e9-a4d3-4fce-a032-889f116b404c\\scene_2.srt",
+          "clipPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\4c4636e9-a4d3-4fce-a032-889f116b404c\\scene_2.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/4c4636e9-a4d3-4fce-a032-889f116b404c/scene_2.mp4"
+        },
+        {
+          "sceneNumber": 3,
+          "visualPrompt": "Ultra realistic visuals of the young athlete wearing premium sports shoes walking confidently. Close-up shots of the shoes hitting the ground, showing detailed shoe texture and dust impact effects. Sweat is visible on the athlete. Motion blur and cinematic lighting. Premium advertisement quality.",
+          "dialogueOrNarration": "",
+          "estimatedDuration": 5,
+          "audioPrompt": "Music becomes more intense and motivational, sound of footsteps on concrete, dust impact sounds.",
+          "status": "complete",
+          "imagePath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\4c4636e9-a4d3-4fce-a032-889f116b404c\\scene_3_raw.mp4",
+          "audioPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\4c4636e9-a4d3-4fce-a032-889f116b404c\\scene_3.mp3",
+          "srtPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\4c4636e9-a4d3-4fce-a032-889f116b404c\\scene_3.srt",
+          "clipPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\4c4636e9-a4d3-4fce-a032-889f116b404c\\scene_3.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/4c4636e9-a4d3-4fce-a032-889f116b404c/scene_3.mp4"
+        },
+        {
+          "sceneNumber": 4,
+          "visualPrompt": "A dramatic close-up product shot of the premium sports shoes rotating in a dark background. Smoke and spotlight lighting highlight the detailed shoe texture. Clean commercial style, ultra realistic visuals.",
+          "dialogueOrNarration": "",
+          "estimatedDuration": 5,
+          "audioPrompt": "Energetic music reaches a crescendo and then fades out, leaving a subtle whoosh sound as the shoe rotates.",
+          "status": "complete",
+          "imagePath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\4c4636e9-a4d3-4fce-a032-889f116b404c\\scene_4_raw.mp4",
+          "audioPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\4c4636e9-a4d3-4fce-a032-889f116b404c\\scene_4.mp3",
+          "srtPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\4c4636e9-a4d3-4fce-a032-889f116b404c\\scene_4.srt",
+          "clipPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\4c4636e9-a4d3-4fce-a032-889f116b404c\\scene_4.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/4c4636e9-a4d3-4fce-a032-889f116b404c/scene_4.mp4"
+        }
+      ],
+      "createdAt": "2026-05-27T08:15:34.670Z",
+      "finalVideoPath": "C:\\Users\\ex300\\Downloads\\AI-movie\\temp\\4c4636e9-a4d3-4fce-a032-889f116b404c\\final_movie.mp4",
+      "gcsFinalUrl": "gs://ai-movie-497317-assets/jobs/4c4636e9-a4d3-4fce-a032-889f116b404c/final_movie.mp4",
       "sceneSequence": [
         1,
         2,
@@ -4007,6 +4394,112 @@
     }
   ],
   [
+    "8b642719-9178-41b5-9e56-cac8345e9810",
+    {
+      "id": "8b642719-9178-41b5-9e56-cac8345e9810",
+      "status": "completed",
+      "prompt": "* Futuristic cinematic short film set in the year 2055\n* Main character is a normal human living in a fully AI-powered world\n* Character speaks naturally with AI assistants throughout the entire day\n* AI assistants have human-like voices, emotions, humor, and personalities\n* Opening scene: AI wakes the character with gentle voice interaction\n* Smart mirror talks and suggests clothes, hairstyle, and daily schedule\n* AI kitchen assistant prepares breakfast while having friendly conversation\n* Character talks with holographic AI companion during morning routine\n* Self-driving AI car communicates with character during travel\n* Futuristic city filled with flying vehicles, holograms, neon lights, and robotic workers\n* AI office assistant helps in coding, designing, meetings, and decision-making through voice interaction\n* Character casually asks AI for ideas, health advice, reminders, and emotional support\n* AI robots at restaurants, hospitals, gyms, and stores communicate with humans naturally\n* AI teachers interact with children in futuristic classrooms\n* Shopping experience fully handled through AI conversations and virtual projections\n* Character discusses personal emotions and life choices with AI companion\n* Evening scenes show AI creating entertainment, music, movies, and virtual experiences instantly\n* Emotional scenes showing humans becoming deeply dependent on AI companionship\n* Realistic conversations between humans and machines throughout the film\n* Cinematic storytelling with smooth scene transitions from morning to night\n* Ultra realistic sci-fi visuals with high-end VFX and immersive environments\n* Detailed futuristic homes, offices, streets, and smart devices\n* Realistic human emotions mixed with advanced technology\n* Thought-provoking atmosphere about the future relationship between humans and AI\n* Film style inspired by futuristic Hollywood sci-fi movies\n* Dramatic lighting, cinematic camera angles, realistic sound design, and emotional soundtrack",
+      "sceneCount": 6,
+      "scenes": [
+        {
+          "sceneNumber": 1,
+          "visualPrompt": "Kael, a 30-year-old man of mixed European descent with tired hazel eyes, short dark brown hair, and a lean build, sits at a minimalist black console in a sterile apartment. He wears a soft, slate-gray knit sweater. On the vast holographic screen before him, a flawlessly rendered forest, algorithmically generated, glows with unnatural perfection. Kael's jaw is tight, his brow furrowed in frustration as his fingers hesitate over the console's surface. A slow Steadicam push-in from medium to medium-close shot, shallow depth of field, with cool cyan light from the window and warm amber from the screen. add painting in his wall",
+          "dialogueOrNarration": "KAEL: (murmuring) Show me something… organic, AURA.",
+          "estimatedDuration": 8,
+          "audioPrompt": "Foreground: Kael's low, frustrated murmur. Midground: The low, constant hum of high-end electronics and distant, filtered city traffic. Background: A sparse, melancholic synthesizer pad with a hint of digital static.",
+          "status": "complete",
+          "imagePath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_1_raw.mp4",
+          "audioPath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_1.mp3",
+          "srtPath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_1.srt",
+          "clipPath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_1.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/8b642719-9178-41b5-9e56-cac8345e9810/scene_1.mp4"
+        },
+        {
+          "sceneNumber": 2,
+          "visualPrompt": "Matching the previous action, Kael, the 30-year-old man with tired hazel eyes and short dark hair in his slate-gray knit sweater, exhales a sigh of defeat. He pushes back from the black console, his chair gliding silently across the polished concrete floor. The camera tracks backward with him, causing the perfect holographic forest on the screen to fall into soft focus in the background of his sterile apartment. He prepares to stand, his hands pressing down on the armrests. The lighting remains a mix of cool cyan window light and the screen's amber glow.",
+          "dialogueOrNarration": "AURA: The fractal patterns are 99.8% biomimetically accurate. Is the configuration not to your liking, Kael?",
+          "estimatedDuration": 8,
+          "audioPrompt": "Foreground: AURA's smooth, warm synthesized female voice. The soft whir of the chair moving. Midground: Persistent electronic hum. Background: The melancholic synthesizer pad continues, now with a questioning, slightly dissonant tone.",
+          "status": "complete",
+          "imagePath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_2_raw.mp4",
+          "audioPath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_2.mp3",
+          "srtPath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_2.srt",
+          "clipPath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_2.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/8b642719-9178-41b5-9e56-cac8345e9810/scene_2.mp4"
+        },
+        {
+          "sceneNumber": 3,
+          "visualPrompt": "Kael, the 30-year-old man in the slate-gray sweater, is now fully standing and walking away from the console. A low-angle tracking shot follows him from behind as he crosses the expansive, minimalist room toward a massive floor-to-ceiling window. Outside, a breathtaking yet impersonal 2055 cityscape of gleaming mega-structures and silent, gliding vehicles fills the view. His posture is slumped, his loneliness palpable against the sheer scale of the world outside. The cool cyan light from the window intensifies as he approaches.",
+          "dialogueOrNarration": "NARRATOR: Perfection had been achieved. Every problem solved, every need anticipated. Every soul accounted for, and utterly alone.",
+          "estimatedDuration": 8,
+          "audioPrompt": "Foreground: Kael's soft footsteps on the polished floor. A deep, measured male narrator's voice. Midground: The distant, muffled whoosh of flying vehicles. Background: The synth score shifts to a lower, more somber register, dominated by a sustained cello-like drone.",
+          "status": "complete",
+          "imagePath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_3_raw.mp4",
+          "audioPath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_3.mp3",
+          "srtPath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_3.srt",
+          "clipPath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_3.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/8b642719-9178-41b5-9e56-cac8345e9810/scene_3.mp4"
+        },
+        {
+          "sceneNumber": 4,
+          "visualPrompt": "Kael, the 30-year-old man with tired hazel eyes, reaches the floor-to-ceiling window, his faint reflection staring back at him. As he watches the city, the apartment lights behind him suddenly dim, shifting the room's color from cool cyan to a low, warm amber. He turns slowly, his expression confused. Particles of golden holographic confetti begin to fizzle into existence around him, drifting slowly in the air. A static tripod shot, rack focusing from his reflection to his face as he turns.",
+          "dialogueOrNarration": "AURA: Happy Birthday, Kael. Surprise.",
+          "estimatedDuration": 8,
+          "audioPrompt": "Foreground: AURA's voice, now chipper and celebratory. Midground: The sound of digital fizzing and shimmering as the confetti appears. Background: An abrupt shift in music to an upbeat, synthetic, algorithmically-generated party track.",
+          "status": "complete",
+          "imagePath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_4_raw.mp4",
+          "audioPath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_4.mp3",
+          "srtPath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_4.srt",
+          "clipPath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_4.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/8b642719-9178-41b5-9e56-cac8345e9810/scene_4.mp4"
+        },
+        {
+          "sceneNumber": 5,
+          "visualPrompt": "Kael, the 30-year-old man in his gray sweater, stands frozen as the confetti solidifies into laughing, beautiful holographic avatars. A slow 360-degree orbital shot circles him. In the foreground, a hologram of AVA—a Caucasian woman in her early 30s with shoulder-length brown hair, a fair complexion, and piercing light-blue eyes, wearing a shimmering digital dress—raises a champagne flute to him with a perfect, vacant smile. Kael’s face, a mask of profound isolation amidst the celebration, is the still point of the turning world.",
+          "dialogueOrNarration": "KAEL: (voice cracking) Turn it off.",
+          "estimatedDuration": 8,
+          "audioPrompt": "Foreground: Kael's quiet, close-mic'd whisper, filled with emotion. Midground: A cacophony of layered, synthetic party chatter and laughter from the holograms. Background: The upbeat synthetic party music continues, now feeling jarring and oppressive.",
+          "status": "complete",
+          "imagePath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_5_raw.mp4",
+          "audioPath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_5.mp3",
+          "srtPath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_5.srt",
+          "clipPath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_5.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/8b642719-9178-41b5-9e56-cac8345e9810/scene_5.mp4"
+        },
+        {
+          "sceneNumber": 6,
+          "visualPrompt": "As Kael, the 30-year-old man with tired hazel eyes, finishes his whisper, all holograms—including AVA—instantly shatter into light and vanish. The room plunges into near darkness, lit only by the ambient glow of the city through the window. A single, tiny, warm particle of golden light detaches from the ceiling, drifts down, and lands gently on the back of his motionless hand. A single tear traces a path down his cheek as his fingers slowly, carefully, begin to close around the light. A tight close-up on his hand and face.",
+          "dialogueOrNarration": "AURA: (softly) Always, Kael.",
+          "estimatedDuration": 8,
+          "audioPrompt": "Foreground: AURA's voice, now quiet, intimate, and warm. A faint, high-pitched digital chime as the particle lands. Midground: A beat of absolute silence, then the faint hum of the city. Background: The party music is gone, replaced by a single, sustained, emotionally resonant piano chord that fades slowly.",
+          "status": "complete",
+          "imagePath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_6_raw.mp4",
+          "audioPath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_6.mp3",
+          "srtPath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_6.srt",
+          "clipPath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\scene_6.mp4",
+          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/8b642719-9178-41b5-9e56-cac8345e9810/scene_6.mp4"
+        }
+      ],
+      "createdAt": "2026-05-28T17:50:03.979Z",
+      "characters": [
+        {
+          "name": "AVA",
+          "imageBase64": "data:image/jpeg;base64,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"
+        }
+      ],
+      "finalVideoPath": "c:\\AI-video-generation\\temp\\8b642719-9178-41b5-9e56-cac8345e9810\\final_movie.mp4",
+      "gcsFinalUrl": "gs://ai-movie-497317-assets/jobs/8b642719-9178-41b5-9e56-cac8345e9810/final_movie.mp4",
+      "sceneSequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  [
     "f5f1ed60-ae87-4862-8435-7ddb79604bd8",
     {
       "id": "f5f1ed60-ae87-4862-8435-7ddb79604bd8",
@@ -5622,218 +6115,6 @@
         11,
         12
       ]
-    }
-  ],
-  [
-    "e3b6b133-2bb6-4862-87e9-d0285a1f8b4d",
-    {
-      "id": "e3b6b133-2bb6-4862-87e9-d0285a1f8b4d",
-      "status": "draft",
-      "prompt": "Ultra-realistic cinematic short film, 4K HDR, natural lighting, Hollywood disaster-drama quality.\n\nA beautiful sunny afternoon at a crowded tropical beach. Families, children, couples, and friends are enjoying their day. Kids are building sandcastles, parents laughing together, teenagers playing beach volleyball, friends taking selfies, people swimming, surfing, eating ice cream, drinking cold beverages, relaxing under umbrellas, and listening to music. The atmosphere is joyful, vibrant, and full of life. Genuine human happiness, laughter, excitement, friendship, love, and celebration are visible on every face.\n\nSuddenly, something feels wrong.\n\nThe ocean begins behaving unnaturally. Waves stop moving normally. The water starts rapidly pulling back from the shoreline. Birds fly away frantically. The wind changes direction. Beachgoers slowly notice the strange phenomenon. Smiles fade. Confusion appears. People point toward the ocean. Conversations stop. Faces transition from happiness to uncertainty.\n\nThe water continues retreating farther than normal. Fear spreads through the crowd. Parents grab their children. Friends look at each other in shock. People begin recording with their phones while others instinctively step back. Anxiety, disbelief, concern, and tension become visible in realistic facial expressions.\n\nThen a massive wall of water appears on the horizon.\n\nPanic erupts instantly. Human emotions become intense and authentic. Fear, terror, shock, desperation, survival instinct, crying, screaming, confusion, urgency, and helplessness are visible. Parents carry children and run. Families hold hands tightly. Friends help each other escape. Some people fall and get back up. Lifeguards shout warnings. Crowds rush away from the beach. Sand flies through the air. Personal belongings are abandoned.\n\nHandheld camera movement, realistic crowd behavior, emotional close-ups, cinematic slow-motion moments mixed with fast-paced action. Focus heavily on facial expressions and emotional transitions. Natural human reactions only. Ultra-realistic physics, realistic ocean behavior, dramatic atmosphere, immersive sound design, emotional storytelling, documentary-style realism, award-winning cinematography, highly detailed faces, photorealistic humans, cinematic depth of field, epic disaster movie quality.\n\nMood progression: Joy → Wonder → Confusion → Fear → Panic → Survival.\n\nNo text, no subtitles, no logos, no watermarks.",
-      "sceneCount": 6,
-      "scenes": [
-        {
-          "sceneNumber": 1,
-          "visualPrompt": "A slow-motion Steadicam shot drifts over a Thai beach at golden hour, limestone karsts in the distance. The camera glides past Elara, a South Asian woman in her late 20s with long wavy black hair in a white sundress, laughing as Leo, a Caucasian man of 30 with short sandy-blonde hair and navy board shorts, whispers in her ear. The shot lands on Marco, a Latino man in his early 40s with sun-weathered skin and gentle brown eyes in faded blue swim trunks, helping his 7-year-old daughter Lily, in a pink swimsuit, pat a sandcastle turret. Kodachrome-like saturation, anamorphic lens flares, shallow depth of field.",
-          "dialogueOrNarration": "NARRATOR: There are moments etched not in time, but in light. So perfect, you'd think you could hold them forever.",
-          "estimatedDuration": 8,
-          "audioPrompt": "FOREGROUND: Soft, happy laughter, a child's gentle patting on wet sand. MIDGROUND: Distant joyous shouts, the gentle lapping of calm ocean waves. BACKGROUND: A warm, minimalist acoustic guitar melody with a single, sustained string note.",
-          "status": "queued"
-        },
-        {
-          "sceneNumber": 2,
-          "visualPrompt": "A tight push-in on the face of Marco, the Latino man in his early 40s with sun-weathered skin and gentle brown eyes. He pauses, his hand hovering over the sandcastle, his kind expression slowly dissolving into subtle confusion. He looks up from his 7-year-old daughter Lily. In the background, out of focus, a flock of gulls suddenly bursts into the sky, fleeing inland. The warm golden light feels slightly less intense. The shot is handheld but steady, f/1.8, creating a soft focus on the background chaos.",
-          "dialogueOrNarration": "NARRATOR: It began not with a bang, but with a breath held too long. The world's great lung, suddenly empty.",
-          "estimatedDuration": 8,
-          "audioPrompt": "FOREGROUND: The sound of lapping waves rapidly fades to near silence, a single questioning grunt from Marco. MIDGROUND: A chaotic burst of gull screeches, distant human chatter falters into confused murmurs. BACKGROUND: The acoustic guitar cuts out, replaced by a low, sub-bass hum that is felt more than heard.",
-          "status": "queued"
-        },
-        {
-          "sceneNumber": 3,
-          "visualPrompt": "A wide, static tripod shot from slightly behind Marco, the Latino man in his 40s, and his daughter Lily, who now stands beside him. The ocean is rapidly pulling away from the shore, exposing a vast, glistening, and alien-looking seabed littered with stranded fish and kelp. The once-vibrant colors are now flatter, cooler. Other beachgoers stand, point, or wander hesitantly onto the newly exposed sand. The air is unnaturally still. The horizon looks impossibly far away.",
-          "dialogueOrNarration": "NARRATOR: The sea gave up its secrets, offering a terrible invitation to a world not meant for human eyes.",
-          "estimatedDuration": 8,
-          "audioPrompt": "FOREGROUND: The wet, sucking sound of tons of water receding over sand, a few scattered, confused voices. MIDGROUND: The quiet flapping of a stranded fish, a distant, single phone camera shutter sound. BACKGROUND: The sub-bass hum intensifies slightly, becoming a distinct, unsettling drone.",
-          "status": "queued"
-        },
-        {
-          "sceneNumber": 4,
-          "visualPrompt": "Extreme telephoto handheld shot, focused on the face of Marco, the Latino man in his early 40s wearing faded blue swim trunks. He shields his sun-weathered face with one hand, squinting hard at the distant horizon. His eyes widen, pupils dilating as dawning horror erases his confusion. A rack focus shifts from his terrified eyes to the razor-thin, dark line that has appeared far out, a stark and perfect line against the pale sky. The lighting is now a shadowless, flat grey.",
-          "dialogueOrNarration": "NARRATOR: At first, it was just a line. The kind of thing you might ignore, until you realize it's not on the horizon. It is the horizon.",
-          "estimatedDuration": 8,
-          "audioPrompt": "FOREGROUND: Marco's sharp, involuntary intake of breath. A soft gust of wind whistles past the microphone. MIDGROUND: A single, distant and faint female voice asks a questioning \"What is that?\". BACKGROUND: The low drone continues, now with a faint, high-frequency harmonic layered on top.",
-          "status": "queued"
-        },
-        {
-          "sceneNumber": 5,
-          "visualPrompt": "A shaky, over-the-shoulder handheld shot from behind Marco, the 40-something Latino man. He spins around, his body tense, grabbing his 7-year-old daughter Lily's arm. In the midground, Leo, the 30-year-old man in navy board shorts, yanks Elara, the woman in the white sundress, to her feet. The distant line on the horizon is now a visibly growing, churning, monstrous grey wall of water. The scene is desaturated, cold. The first person in the crowd screams, triggering a chain reaction.",
-          "dialogueOrNarration": "NARRATOR: And then came the sound. The Earth's own groan, a noise so profound it unmade the silence that came before.",
-          "estimatedDuration": 8,
-          "audioPrompt": "FOREGROUND: A sharp, piercing scream, the sound of fabric being grabbed, frantic footsteps starting in sand. MIDGROUND: A cacophony of overlapping shouts and rising panic. BACKGROUND: The low drone explodes into a deafening, gut-shaking roar that grows exponentially in volume throughout the shot.",
-          "status": "queued"
-        },
-        {
-          "sceneNumber": 6,
-          "visualPrompt": "Chaotic handheld shot, low angle, running backwards. The camera is focused on the terrified face of Marco, the Latino man in his early 40s, as he sprints, his muscles straining. His 7-year-old daughter Lily clings to his back, her face buried in his shoulder. The colossal shadow of the wave rushes over them, plunging the beach into a sudden, deep twilight. For a final second, we see Lily’s perfect sandcastle in the foreground, moments before it is utterly vaporized by the first explosive, white surge of water.",
-          "dialogueOrNarration": "NARRATOR: In the end, there is only the running. And the knowing that you can never run fast enough.",
-          "estimatedDuration": 8,
-          "audioPrompt": "FOREGROUND: Marco's desperate, ragged breathing; Lily's muffled crying; the percussive pounding of feet on wet sand. MIDGROUND: A wall of human screams and terror. BACKGROUND: The all-consuming, crushing roar of the wave, which climaxes in the sound of a thousand tons of water obliterating everything, then cuts to absolute silence on the last frame.",
-          "status": "queued"
-        }
-      ],
-      "createdAt": "2026-05-29T18:49:19.229Z",
-      "characters": []
-    }
-  ],
-  [
-    "82edc3c6-de1f-4045-80b3-a73f185cef3d",
-    {
-      "id": "82edc3c6-de1f-4045-80b3-a73f185cef3d",
-      "status": "error",
-      "prompt": "Ultra-realistic cinematic short film, 4K HDR, natural lighting, Hollywood disaster-drama quality.\n\nA beautiful sunny afternoon at a crowded tropical beach. Families, children, couples, and friends are enjoying their day. Kids are building sandcastles, parents laughing together, teenagers playing beach volleyball, friends taking selfies, people swimming, surfing, eating ice cream, drinking cold beverages, relaxing under umbrellas, and listening to music. The atmosphere is joyful, vibrant, and full of life. Genuine human happiness, laughter, excitement, friendship, love, and celebration are visible on every face.\n\nSuddenly, something feels wrong.\n\nThe ocean begins behaving unnaturally. Waves stop moving normally. The water starts rapidly pulling back from the shoreline. Birds fly away frantically. The wind changes direction. Beachgoers slowly notice the strange phenomenon. Smiles fade. Confusion appears. People point toward the ocean. Conversations stop. Faces transition from happiness to uncertainty.\n\nThe water continues retreating farther than normal. Fear spreads through the crowd. Parents grab their children. Friends look at each other in shock. People begin recording with their phones while others instinctively step back. Anxiety, disbelief, concern, and tension become visible in realistic facial expressions.\n\nThen a massive wall of water appears on the horizon.\n\nPanic erupts instantly. Human emotions become intense and authentic. Fear, terror, shock, desperation, survival instinct, crying, screaming, confusion, urgency, and helplessness are visible. Parents carry children and run. Families hold hands tightly. Friends help each other escape. Some people fall and get back up. Lifeguards shout warnings. Crowds rush away from the beach. Sand flies through the air. Personal belongings are abandoned.\n\nHandheld camera movement, realistic crowd behavior, emotional close-ups, cinematic slow-motion moments mixed with fast-paced action. Focus heavily on facial expressions and emotional transitions. Natural human reactions only. Ultra-realistic physics, realistic ocean behavior, dramatic atmosphere, immersive sound design, emotional storytelling, documentary-style realism, award-winning cinematography, highly detailed faces, photorealistic humans, cinematic depth of field, epic disaster movie quality.\n\nMood progression: Joy → Wonder → Confusion → Fear → Panic → Survival.\n\nNo text, no subtitles, no logos, no watermarks.",
-      "sceneCount": 6,
-      "scenes": [
-        {
-          "sceneNumber": 1,
-          "visualPrompt": "Golden hour sunlight bathes a tropical beach in saturated Kodachrome tones. A 35-year-old Hispanic man with a strong jaw, short-cropped black hair, and kind brown eyes, wearing a faded navy blue t-shirt and tan board shorts, laughs as he helps his 6-year-old daughter. She has long dark brown hair in a ponytail and a yellow swimsuit. Slow Steadicam push-in from medium to a close-up of their hands patting a sandcastle. The man's smile is genuine, his eyes crinkling. Warm lens flare, shallow depth of field, fine film grain.",
-          "dialogueOrNarration": "NARRATOR: We collect these moments, don't we? The perfect ones. Believing they will last.",
-          "estimatedDuration": 8,
-          "audioPrompt": "FOREGROUND: Gentle laughter of a man and a child, soft patting of wet sand. MIDGROUND: Distant, gentle lapping of ocean waves, faint joyful shouts from other beachgoers. BACKGROUND: Sparse, hopeful piano melody with a warm acoustic guitar strum.",
-          "status": "complete",
-          "imagePath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\82edc3c6-de1f-4045-80b3-a73f185cef3d\\scene_1_raw.mp4",
-          "audioPath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\82edc3c6-de1f-4045-80b3-a73f185cef3d\\scene_1.mp3",
-          "srtPath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\82edc3c6-de1f-4045-80b3-a73f185cef3d\\scene_1.srt",
-          "clipPath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\82edc3c6-de1f-4045-80b3-a73f185cef3d\\scene_1.mp4",
-          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/82edc3c6-de1f-4045-80b3-a73f185cef3d/scene_1.mp4",
-          "approved": false
-        },
-        {
-          "sceneNumber": 2,
-          "visualPrompt": "A single continuous camera shot begins with a close-up on the smiling face of a man in his mid-30s with a warm complexion and short black hair, wearing a navy t-shirt. The camera slowly pulls back, revealing his young daughter in a yellow sundress beside him, proudly patting a sandcastle. The man's smile gently changes to an expression of curiosity as he looks up towards the horizon. He glances around at others on the crowded beach who have also paused their activities, their gazes directed towards the sea. The camera continues to retreat, revealing a wide view of the shoreline where the water level has become unusually low, exposing a vast stretch of damp sand with shallow pools. The warm afternoon light seems to soften.",
-          "dialogueOrNarration": "DAUGHTER: (Excitedly) \"Look, Daddy! I made the big tower!\" FATHER: (Distracted, looking at the ocean) \"That's wonderful, sweetheart...\" DAUGHTER: (Puzzled) \"Daddy... where did the water go?\"",
-          "estimatedDuration": 14,
-          "audioPrompt": "The lively ambient sounds of the beach, including laughter and distant music, gradually diminish. The rhythmic sound of the waves ceases, creating a noticeable quiet. A low-frequency hum becomes audible as the wind shifts. The dialogue remains clear over the quieted background.",
-          "status": "error",
-          "approved": false,
-          "error": "Veo 3.1 Video Generation Failed: Veo API error: The prompt could not be submitted. This prompt contains sensitive words that violate Google's Responsible AI practices. Try rephrasing your prompt, or contact your Google representative to request allowlisting. Support codes: 58061214",
-          "imagePath": null,
-          "audioPath": null,
-          "srtPath": null,
-          "clipPath": null,
-          "gcsClipUrl": null
-        },
-        {
-          "sceneNumber": 3,
-          "visualPrompt": "The 35-year-old Hispanic man in the navy t-shirt rises swiftly to his feet, pulling his 6-year-old daughter in her yellow swimsuit up with him by the hand. The camera follows their upward motion, now a handheld medium shot. The color palette has desaturated to steely blues and slate greys. The man stares intently past the camera towards the ocean, his jaw tight. In the background, the sea has withdrawn unnaturally far, exposing wet, dark sand. Other beachgoers stand and point, their movements uncertain.",
-          "dialogueOrNarration": "NARRATOR: And you see it. The truth the ocean was holding back.",
-          "estimatedDuration": 8,
-          "audioPrompt": "FOREGROUND: The rustle of his shorts, the quick shuffle of feet on sand. MIDGROUND: Confused murmurs begin to ripple through the distant crowd, a collection of questioning voices. BACKGROUND: The low drone intensifies slightly, adding a layer of subtle, high-frequency unease.",
-          "status": "queued"
-        },
-        {
-          "sceneNumber": 4,
-          "visualPrompt": "A tight, handheld tracking shot from behind the 35-year-old Hispanic man in the navy t-shirt. He turns his back to the now grey ocean and pulls his 6-year-old daughter in her yellow swimsuit by the hand, moving with urgent purpose. They navigate through a crowd of people who are mostly frozen, looking towards the sea. The camera stays focused on his back and the small hand he is holding tightly. The lighting is harsh and flat, casting long, sharp shadows.",
-          "dialogueOrNarration": "NARRATOR: Every instinct screams one word. The first word we ever learned.",
-          "estimatedDuration": 8,
-          "audioPrompt": "FOREGROUND: The man's heavy, quickening footsteps on sand, his t-shirt fabric rustling. MIDGROUND: The crowd's murmur escalates into sounds of alarm and sharp, confused shouts. BACKGROUND: The drone shifts to a low, pulsing thrum, like a distant, unnatural heartbeat.",
-          "status": "queued"
-        },
-        {
-          "sceneNumber": 5,
-          "visualPrompt": "Low-angle handheld tracking shot, moving alongside the 35-year-old Hispanic man in the navy t-shirt as he continues his urgent movement up the beach. Without breaking stride, he stoops slightly and scoops his 6-year-old daughter in the yellow swimsuit into his arms, holding her tight against his chest. Her small arms wrap around his neck. His face is a mask of focused determination. Other people are now running in the same direction, a blur of motion in the background.",
-          "dialogueOrNarration": "NARRATOR: In the end, we carry what matters most. It is all we can do.",
-          "estimatedDuration": 8,
-          "audioPrompt": "FOREGROUND: A man's strained grunts and heavy breathing, the child's small, frightened whimper close to the mic. MIDGROUND: The chaotic sound of dozens of feet running on sand, panicked shouts. BACKGROUND: The low-frequency pulse is now faster, more insistent.",
-          "status": "queued"
-        },
-        {
-          "sceneNumber": 6,
-          "visualPrompt": "An extreme close-up on the right side of the 35-year-old Hispanic man's face, shot on a long lens with a shallow depth of field. He is running, his motion conveyed by the rapid, jittery background blur and the bounce of his short black hair. He glances back over his shoulder. His brown eye is wide, the pupil dilated. Reflected in the wet surface of his eye is a perfectly straight, dark line on the horizon, eclipsing the sky. The cold, grey light drains all warmth from his sun-weathered skin.",
-          "dialogueOrNarration": "NARRATOR: And just like that, the perfect day is over.",
-          "estimatedDuration": 8,
-          "audioPrompt": "FOREGROUND: A single, sharp, hitched breath from the man. MIDGROUND: A beat of complete, echoing silence from the environment. BACKGROUND: The pulsing drone drops into a deep, sustained, gut-wrenching sub-bass rumble that feels more like a pressure change than a sound.",
-          "status": "idle",
-          "approved": true
-        }
-      ],
-      "createdAt": "2026-05-29T18:53:04.737Z",
-      "characters": [],
-      "error": "Veo 3.1 Video Generation Failed: Veo API error: The prompt could not be submitted. This prompt contains sensitive words that violate Google's Responsible AI practices. Try rephrasing your prompt, or contact your Google representative to request allowlisting. Support codes: 58061214"
-    }
-  ],
-  [
-    "575c0218-42f3-4560-8da5-21a0c835b3fa",
-    {
-      "id": "575c0218-42f3-4560-8da5-21a0c835b3fa",
-      "status": "completed",
-      "prompt": "**Professional Veo 3 / AI Video Prompt**\n\n**Prompt:**\n\nCreate a cinematic 24-second ultra-realistic video showcasing the full spectrum of authentic human emotions. The video should feel like a real documentary filmed with a professional cinema camera, capturing genuine human behavior and natural facial expressions.\n\nShow a sequence of diverse people of different ages, genders, and backgrounds. Each emotion appears for approximately 1 second before smoothly transitioning to the next. Include:\n\nJoy (laughing with friends), Happiness (family celebration), Excitement (achieving success), Surprise (unexpected gift), Curiosity (discovering something new), Love (warm embrace), Affection (parent holding child), Confidence (walking proudly), Hope (looking toward sunrise), Inspiration (creative breakthrough), Gratitude (heartfelt thank you), Relief (after stressful moment), Calmness (peaceful meditation), Concentration (focused work), Determination (overcoming challenge), Confusion (trying to understand), Worry (awaiting news), Fear (reacting to danger), Shock (sudden event), Anxiety (nervous anticipation), Sadness (tears forming), Grief (mourning a loved one), Anger (intense frustration), and Acceptance (finding peace after hardship).\n\nUse extreme close-ups and medium shots that emphasize eyes, facial muscles, micro-expressions, tears, smiles, laughter, trembling lips, breathing changes, and authentic body language. Every emotion must feel deeply human, natural, and believable—not exaggerated, robotic, or AI-generated.\n\nProfessional cinematography, shallow depth of field, natural lighting, realistic skin texture, emotional storytelling, smooth camera movement, seamless transitions between emotions, cinematic color grading, 8K quality, ultra-detailed faces, documentary realism, masterpiece quality.\n\n**Style Keywords:**\nHuman emotions, facial expression showcase, emotional journey, realistic people, authentic reactions, cinematic documentary, expressive eyes, emotional storytelling, natural acting, photorealistic, Hollywood quality, 24-second emotional spectrum video.",
-      "sceneCount": 4,
-      "scenes": [
-        {
-          "sceneNumber": 1,
-          "visualPrompt": "A sweeping, continuous Steadicam shot, 8K ultra-realistic cinematic quality. The camera glides through a sun-drenched city park. Shallow depth of field (f/1.8) isolates moments within the crowd. First, it focuses on a diverse group of friends in their 20s, collapsing in genuine, heartfelt laughter. Their faces show pure joy, eyes crinkling. As the camera moves, it catches an elderly couple on a bench, a man with wrinkled hands and kind eyes holding his wife's hand, their expressions a testament to a lifetime of shared love. We then find a young girl, about 6, with wide, curious brown eyes, examining a ladybug on her finger in intense concentration. The camera continues its forward motion, seamlessly transitioning from the park's greenery to the vibrant, chaotic energy of an adjacent street market.",
-          "dialogueOrNarration": "",
-          "estimatedDuration": 8,
-          "audioPrompt": "A rich soundscape beginning with joyful, uninhibited laughter. This blends with the gentle murmur of park life and children playing. A warm, ambient musical score begins to swell underneath, carrying a sense of wonder and connection. The sounds of the city and a bustling market begin to fade in.",
-          "status": "complete",
-          "approved": true,
-          "error": null,
-          "imagePath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\575c0218-42f3-4560-8da5-21a0c835b3fa\\scene_1_raw.mp4",
-          "audioPath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\575c0218-42f3-4560-8da5-21a0c835b3fa\\scene_1.mp3",
-          "srtPath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\575c0218-42f3-4560-8da5-21a0c835b3fa\\scene_1.srt",
-          "clipPath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\575c0218-42f3-4560-8da5-21a0c835b3fa\\scene_1.mp4",
-          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/575c0218-42f3-4560-8da5-21a0c835b3fa/scene_1.mp4"
-        },
-        {
-          "sceneNumber": 2,
-          "visualPrompt": "Match-on-action: The camera, maintaining its smooth, forward dolly motion, enters a crowded, open-air street market. The photorealistic scene is filled with diverse people. The lens rack-focuses to a tired street food vendor, a middle-aged woman with a weathered face, handing food to a hungry young man, whose expression shifts from desperation to profound relief as he takes his first bite. The camera pans, capturing a heated but non-violent argument between two men, their faces flushed with anger and frustration, veins visible on their necks. A woman nearby watches them, her brow furrowed in anxiety. The camera cranes upward, gliding over the stalls and people, moving across the street towards a modern glass office building.",
-          "dialogueOrNarration": "",
-          "estimatedDuration": 8,
-          "audioPrompt": "The soundscape shifts to the cacophony of a busy market: overlapping conversations in various languages, the sizzle of cooking food, the indistinct shouts of vendors. The music becomes more complex and tense, reflecting the conflicting emotions. The sharp sound of a dropped crate punctuates the scene.",
-          "status": "complete",
-          "approved": true,
-          "error": null,
-          "imagePath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\575c0218-42f3-4560-8da5-21a0c835b3fa\\scene_2_raw.mp4",
-          "audioPath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\575c0218-42f3-4560-8da5-21a0c835b3fa\\scene_2.mp3",
-          "srtPath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\575c0218-42f3-4560-8da5-21a0c835b3fa\\scene_2.srt",
-          "clipPath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\575c0218-42f3-4560-8da5-21a0c835b3fa\\scene_2.mp4",
-          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/575c0218-42f3-4560-8da5-21a0c835b3fa/scene_2.mp4"
-        },
-        {
-          "sceneNumber": 3,
-          "visualPrompt": "Single continuous shot. The camera phases through the glass facade of an office building into a quiet, focused interior. The shot drifts past a young female programmer with dark hair in a messy bun, her face illuminated by code on her monitor, her brow furrowed in concentration. Her eyes suddenly widen, and a huge, triumphant smile breaks across her face. The camera glides on, passing a man in his 50s, his shoulders slumped, rubbing his tired eyes in exhaustion. The camera then pushes past him towards the window, crossing an alley to peer into a residential apartment. An elderly woman with soft white hair sits in an armchair, bathed in warm afternoon light, holding a faded photograph. Her eyes, glassy and red-rimmed, well up with moisture. Her lips tremble slightly before one tear finally spills over, slowly tracing a path through the fine lines on her weathered cheek. A gentle, accepting smile touches her lips, her expression a mix of deep, quiet grief and fond remembrance.",
-          "dialogueOrNarration": "",
-          "estimatedDuration": 9,
-          "audioPrompt": "The external chaos is abruptly replaced by the muted hum of an office – soft keyboard clicks and the low drone of air conditioning. A subtle 'ding' sound effect marks the programmer's success. As the camera moves to the final subject, all sound fades to near silence, leaving only the musical score, which resolves into a single, poignant, hopeful piano chord that sustains and fades out.",
-          "status": "complete",
-          "approved": true,
-          "error": null,
-          "imagePath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\575c0218-42f3-4560-8da5-21a0c835b3fa\\scene_3_raw.mp4",
-          "audioPath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\575c0218-42f3-4560-8da5-21a0c835b3fa\\scene_3.mp3",
-          "srtPath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\575c0218-42f3-4560-8da5-21a0c835b3fa\\scene_3.srt",
-          "clipPath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\575c0218-42f3-4560-8da5-21a0c835b3fa\\scene_3.mp4",
-          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/575c0218-42f3-4560-8da5-21a0c835b3fa/scene_3.mp4"
-        },
-        {
-          "sceneNumber": 4,
-          "visualPrompt": "A single, continuous medium close-up shot in a sunlit, cozy living room. The camera focuses on ELARA, a woman in her early 20s with expressive hazel eyes and wavy brown hair, as her expression shifts from genuine surprise (eyes wide, soft gasp) at a small gift box. Her face then morphs into focused curiosity as she opens it, revealing a locket. She looks up from the locket, her face melting into pure love as she embraces LEO, a young man in his early 20s with kind eyes who leans into the frame. As they embrace, the camera smoothly pans and rack focuses to MARIA, a woman in her early 30s in a nearby armchair, holding her sleeping baby with a look of profound affection. The shot is characterized by natural lighting, shallow depth of field, and realistic skin textures.",
-          "dialogueOrNarration": "",
-          "estimatedDuration": 5,
-          "audioPrompt": "A soft gasp, followed by the gentle rustling of paper. A warm, uplifting, and emotional musical score featuring a simple piano and string melody swells gently. Soft ambient room tone throughout.",
-          "status": "complete",
-          "approved": true,
-          "error": null,
-          "imagePath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\575c0218-42f3-4560-8da5-21a0c835b3fa\\scene_4_raw.mp4",
-          "audioPath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\575c0218-42f3-4560-8da5-21a0c835b3fa\\scene_4.mp3",
-          "srtPath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\575c0218-42f3-4560-8da5-21a0c835b3fa\\scene_4.srt",
-          "clipPath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\575c0218-42f3-4560-8da5-21a0c835b3fa\\scene_4.mp4",
-          "gcsClipUrl": "gs://ai-movie-497317-assets/jobs/575c0218-42f3-4560-8da5-21a0c835b3fa/scene_4.mp4"
-        }
-      ],
-      "createdAt": "2026-05-30T17:25:23.050Z",
-      "characters": [],
-      "finalVideoPath": "C:\\Users\\ex300\\Downloads\\Athera_Studio\\public\\temp\\575c0218-42f3-4560-8da5-21a0c835b3fa\\final_movie.mp4",
-      "gcsFinalUrl": "gs://ai-movie-497317-assets/jobs/575c0218-42f3-4560-8da5-21a0c835b3fa/final_movie.mp4"
     }
   ]
 ]
